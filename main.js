@@ -33,6 +33,13 @@ $(".homeicondiv").click(function() {
     $(".mainpage").removeClass("inactive");
     $(".mainpage").addClass("active");
 });
+$(".bookbtn").click(function(){
+   var nowActive = $(".active");
+    nowActive.removeClass("active");
+    nowActive.addClass("inactive"); 
+    $(".reservationpage").removeClass("inactive");
+    $(".reservationpage").addClass("active");
+});
 $(".login").click(function() {
     alert("login");
 });
