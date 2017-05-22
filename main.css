@@ -89,7 +89,7 @@ span, body, div, img, button {
 	margin-bottom: 30px;
 }
 
-.nowshowingbtn {
+.clicked {
 	border: 1px solid;
 	outline: 0;
 	font-size: 20px;
@@ -99,7 +99,7 @@ span, body, div, img, button {
 	
 }
 
-.comingsoonbtn {
+.unclicked {
 	border: 1px solid;
 	outline: 0;	
 	font-size: 20px;	
@@ -107,9 +107,13 @@ span, body, div, img, button {
 	color: #999999;	
 }
 
+.clicked:hover, .unclicked:hover {
+	cursor: Pointer;
+}
+
 .movieareadiv {
     width: auto;
-    height: 1500px;
+    height: auto;
     padding-top: 3%;
     padding-left: 2%;
     padding-right: 2%;
@@ -154,7 +158,7 @@ span, body, div, img, button {
 }
 
 .movieinfor {	
-	
+	background: #FFFFFF;
 }
 
 .movieimg {
@@ -166,6 +170,7 @@ span, body, div, img, button {
 	margin-top: 6px;
 	font-size: 15px;
 	float: left;
+	color: #6A6A6A;
 }
 
 .startimg {
@@ -220,7 +225,6 @@ span, body, div, img, button {
 }
 
 .nowplayingpage {
-	width: 200px;
-	height: 200px;
-	background: red;
+	width: 100%;
+	height: 100%;
 }

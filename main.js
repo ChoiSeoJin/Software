@@ -44,6 +44,23 @@ $(".login").click(function() {
     alert("login");
 });
 
+$(".nowshowingbtn").click(function() {
+    var me = $(this);
+    var other = $(".comingsoonbtn");
+    other.removeClass("clicked");
+    other.addClass("unclicked");
+    me.removeClass("unclicked");
+    me.addClass("clicked");
+});
+
+$(".comingsoonbtn").click(function() {
+    var me = $(this);
+    var other = $(".nowshowingbtn");
+    other.removeClass("clicked");
+    other.addClass("unclicked");
+    me.removeClass("unclicked");
+    me.addClass("clicked");
+});
 
 
 function onYouTubeIframeAPIReady() {
