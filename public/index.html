@@ -36,7 +36,7 @@
         <div class="logindiv">LOGIN</div>
     </div>
 
-    <div class="mainpage active">
+    <div class="mainpage inactive">
         <div class="home-hero ">
             <div id="heroVideoTvScreen" class="home-hero-video-iframe"></div>
         </div>
@@ -541,7 +541,20 @@
                             <div><a class="seatlayout">5 : 00</a></div>
                         </div>
                     </li>
-
+                    <li class="reservation_list">
+                        <div class="listing-info">
+                            <div class="details">
+                                <div class="_name">내이름은칸</div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                        </div>
+                    </li>
+ 
                     <li class="reservation_list">
                         <div class="listing-info">
                             <div class="details">
@@ -578,10 +591,10 @@
                             </div>
                         </div>
                         <div class="body">
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
                         </div>
                     </li>
                 </ul>
@@ -589,7 +602,7 @@
             </div>
         </div>
 
-        <div class="seatlayout inactive">
+        <div class="seatlayout active">
             <div class="reservation_summary">
                 <div class="movie_info">
 
@@ -599,21 +612,27 @@
                         <span class="title">일반</span>
 
                         <script>
-                            numberCnt('.senior');
+                            numberCnt('senior');
                         </script>
                     </div>
                     <div class="junior">
                         <span class="title">청소년</span>
                         <script>
-                            numberCnt('.junior');
+                            numberCnt('junior');
                         </script>
                     </div>
                 </div>
             </div>
-            <div class="seatlayout"></div>
-            <script>
-                seatlayout();
-            </script>
+
+            <div class="seat">
+                <div class="screen" title="SCREEN">
+                    <span class="text">SCREEN</span>
+                </div>
+                <div class="layout" id="layout">
+                    <script>seatlayout();</script>
+                </div>
+            </div>
+            
         </div>
 
         <!--########################################### reservation div ###########################################-->
@@ -635,7 +654,7 @@
                             <h1> <span>내 이름은 칸</span></h1>My name is Khan
                             <div class="wholeModal">
                                 <div class="modaltable1" style="float:left;">
-                                    <img src="images/kan.jpg" style="height:auto; width:200px;">
+                                    <img src="img/kan.jpg" style="height:auto; width:200px;">
                                 </div>
                                 <div class="writes">
                                     <div class="writeInfo">
