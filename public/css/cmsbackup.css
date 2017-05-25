@@ -201,17 +201,17 @@
     margin: 20px 0px;
 }
 
-ul,
-ol {
+.theaterpage > ul,
+.theaterpage > ol {
     margin: 20px 0px;
     padding: 0px 0px 0px 30px;
 }
 
-li {
+.theaterpage > li {
     margin: 4px 0px;
 }
 
-body {
+.theaterpage {
     text-align: left;
     line-height: 2.0;
     font-size: 15px;
