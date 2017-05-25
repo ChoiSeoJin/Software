@@ -1,0 +1,771 @@
+<html>
+  <head>
+    <title>Main</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        @import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+
+
+        .star-input>.input,
+        .star-input>.input>label:hover,
+        .star-input>.input>input:focus+label,
+        .star-input>.input>input:checked+label{display: inline-block;vertical-align:middle;background:url('images/grade_img.png')no-repeat;}
+        .star-input{display:inline-block; white-space:nowrap;width:225px;height:40px;padding:25px;line-height:30px;}
+        .star-input>.input{display:inline-block;width:150px;background-size:150px;height:28px;white-space:nowrap;overflow:hidden;position: relative;}
+        .star-input>.input>input{position:absolute;width:1px;height:1px;opacity:0;}
+        star-input>.input.focus{outline:1px dotted #ddd;}
+        .star-input>.input>label{width:30px;height:0;padding:28px 0 0 0;overflow: hidden;float:left;cursor: pointer;position: absolute;top: 0;left: 0;}
+        .star-input>.input>label:hover,
+        .star-input>.input>input:focus+label,
+        .star-input>.input>input:checked+label{background-size: 150px;background-position: 0 bottom;}
+        .star-input>.input>label:hover~label{background-image: none;}
+        .star-input>.input>label[for="p1"]{width:30px;z-index:5;}
+        .star-input>.input>label[for="p2"]{width:60px;z-index:4;}
+        .star-input>.input>label[for="p3"]{width:90px;z-index:3;}
+        .star-input>.input>label[for="p4"]{width:120px;z-index:2;}
+        .star-input>.input>label[for="p5"]{width:150px;z-index:1;}
+        .star-input>output{display:inline-block;width:60px; font-size:18px;text-align:right; vertical-align:middle;}
+        .button1{
+            text-align: center;
+        }
+        ol, ul , li{
+            list-style: none;
+        }
+        .button2{
+            left:50%;
+            bottom:0%;
+        }
+
+        .white_content {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            opacity:0;
+            -webkit-transition: opacity 400ms ease-in;
+            -moz-transition: opacity 400ms ease-in;
+            transition: opacity 400ms ease-in;
+            pointer-events: none;
+        }
+        .white_content:target {
+            opacity:1;
+            pointer-events: auto;
+        }
+        .white_content > div {
+            position: absolute;
+            top: 5%;
+            left: 25%;
+            bottom:5%;
+            width: 50%;
+            height: 85%;
+            padding: 16px;
+            border: 5px solid gray;
+            background-color: white;
+            overflow: auto; 
+        }
+        img {
+            height:auto;
+            width:250;
+        }
+        
+        .pic1:hover .bt1{
+            opacity:0.8; 
+            display:block; 
+            position:relative;
+        }
+        table{
+            height:auto;
+            width: auto;
+        }
+
+        #m1 {
+            margin-left: 10%;
+            margin-top:2.5%;          
+        }
+        #m2{
+            margin-left: 2%;
+            margin-top:2.5%;
+        }
+        #m3{
+            margin-left: 2%;
+            margin-top:3%;
+        }
+        .modaltable1{
+            margin-right:3%;
+        }
+        .modal-dialog.modal-80size {
+          width: 45%;
+          height: 80%;
+          margin: 0;
+          padding: 0;
+        }
+
+        .modal-content.modal-80size {
+          height: auto;
+          min-height: 80%;
+          overflow-x:hidden;
+          overflow-y:auto;
+        }
+
+        .modal.modal-center {
+          text-align: center;
+        }
+
+        @media screen and (min-width: 768px) {
+          .modal.modal-center:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: " ";
+            height: 100%;
+          }
+        }
+
+        .modal-dialog.modal-center {
+          display: inline-block;
+          text-align: left;
+          vertical-align: middle;
+        } 
+        #tb_s {
+            height:auto;
+            width:auto;
+            margin-left: 10%;
+            margin-top:2.5%;
+        }
+        #tb_s1{
+            height:auto;
+            width:auto;
+            margin-left: 2%;
+            margin-top:2.5%;
+        }
+        #tb_s2{
+            height:auto;
+            width:auto;
+            margin-left: 2%;
+            margin-top:3%;
+        }
+        #tb_s3{
+            height:auto;
+            width:auto;
+            margin-left: 10%;
+            margin-top:3%;
+        }
+        #bodys{
+            overflow-y: auto;
+        }
+        #myModalLabel{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .writeInfo{
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+    </style>
+  </head>
+<body>
+ <script type="text/javascript" src="js/bootstrap.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+    <div class="container1">
+        <div class="header">
+            <div class="header-text">베드시네마</div>
+        </div>
+        <div class="navigation align-text">
+            <div>상영 예정 영화</div>
+            <div>최신 영화</div>
+            <div>영화관</div>
+            <div>예매</div>
+            <div>로그인</div>
+        </div>
+        <!-- Modal -->
+        <div class="modal modal-center fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="my80sizeCenterModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-80size modal-center" role="document">
+            <div class="modal-content modal-80size" id="bodys">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-title" id="myModalLabel"><h1> <span>내 이름은 칸</span></h1>My name is Khan
+                    <div class="wholeModal">
+                            <div class="modaltable1" style="float:left;">
+                                <img src="images/kan.jpg" style="height:auto; width:200;">
+                            </div>
+                            <div class ="writes">
+                                <div class="writeInfo">       
+                                    <li> <h4>감독 : F 그레이</h4></li>
+                                    <li> <h4>출연진 : A, B, C, D, E</h4> </li>
+                                    <li> <h4>장르 : 액션, 드라마</h4> </li>
+                                    <li> <h4>개봉일 ; 2017. 02. 03</h4></li>
+                                    <li>  <h4>등급 : 15세 관람가</h4></li>
+                                    <li>  <h4>홈페이지 : http://www.naver.com</h4> <button type="button" class="btn btn-info" style="float:right; padding-right: 10px; text-align:center;"><h4> 예매하기</h4></button></li>
+                                    <li>  <h4>관객 수 : 1,235 명</h4><h4>별점 : 4.5점 </h4> </li>
+
+                                    <br><br><br><br>
+                                    <div class="NuseB" style="float:right">
+                                    <button type="button" class="btn btn-default btn">보고 싶은 영화</button>
+                                    <button type="button" class="btn btn-default btn">본 영화</button>
+                                    <button type="button" class="btn btn-default btn">상영시간표</button>
+                                    </div>
+                                    <br><br>
+
+                                </div>
+
+
+                            </div>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-body" style="font-family: 'Noto Sans KR', sans-serif;" >
+                 <h3><strong>줄거리</strong></h3>  <br>
+                                전설 속 마법의 정령 ‘네바’를 지켜라!
+개성 넘치는 숲 속 친구들과 행복한 나날을 보내던 곰돌이 브라더스 ‘브라이어’와 ‘브램블’. 
+ 안전과 평화를 수호하는 마법의 정령 ‘네바’를 우연히 마주하게 된 ‘브램블’은 어릴 적 소중한 기억을 떠올리며 ‘네바’와 우정을 쌓아나간다. 
+ 한편, ‘네바'를 노리는 악당 대장 일행의 위험한 계획으로 숲은 위기에 빠지는데… 
+ 과연 곰돌이 형제와 친구들은 마법의 정령의 ‘네바’를 지키고 숲과 마을의 평화를 지켜낼 수 있을까?!
+<p>
+content scrolls instead.
+Clicking on the modal “backdrop” will automatically close the modal.
+Bootstrap only supports one modal window at a time. Nested modals aren’t supported as we believe them to be poor user experiences.
+Modals use position: fixed, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You’ll likely run into issues when nesting a .modal within another fixed element.
+One again, due to position: fixed, there are some caveats with using modals on mobile devices. See our browser support docs for details.
+Lastly, the autofocus HTML attribute has no affect in modals. Here’s how you can achieve the same effect with custom JavaScript.
+Keep reading for demos and usage guidelines.
+content scrolls instead.
+            <div class="Mpicture">
+                <h3><strong> 스틸 컷</strong></h3>
+                <ul stlye="width: 1471px; height:500px; left: 0px; right: 0px;">
+                    <li class="still1" style="display: block;">
+                        <img src="images/kan.jpg" style="height:auto; width:200;">
+                    </li>
+                </ul>
+            </div>
+
+                
+            <div class="container">
+            
+            <div class="row">
+                <div class="col-md-10">
+                    
+                    <table class="table table-condensed">
+                        <tr>
+                            <td>
+                                <span class="form-inline" role="form">
+                                    <p>
+                                        <div class="form-group">
+                                            <input type="text" id="commentParentName" name="commentParentName" class="form-control col-lg-2" data-rule-required="true" placeholder="이름" maxlength="10">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="commentParentPassword" name="commentParentPassword" class="form-control col-lg-2" data-rule-required="true" placeholder="닉네임" maxlength="10">
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" id="commentParentSubmit" name="commentParentSubmit" class="btn btn-default">확인</button>
+                                        </div>
+                                    </p>
+                                        <textarea id="commentParentText" class="form-control col-lg-12" style="width:85%" rows="4"></textarea>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="commentTable" class="table table-condensed"></table>
+    
+                    <script>
+                        
+                        $(function(){
+                              
+                            //제일 하단에 있는 depth1의 댓글을 다는 이벤트
+                            $("#commentParentSubmit").click(function( event ) {
+                                  
+                                //ajax로 저장하고 성공하면 저장한 데이터를 가져와 넣어야 하는데 여기서는 테스트라 그냥 입력값을 가져옴
+                                var pName = $("#commentParentName");
+                                var pPassword = $("#commentParentPassword");//패스워드를 노출 시켰는데 저장하고 나서 저장한 날짜를 보여줄 예정
+                                var pText = $("#commentParentText");
+                                  
+                                if($.trim(pName.val())==""){
+                                    alert("이름을 입력하세요.");
+                                    pName.focus();
+                                    return;
+                                }else if($.trim(pPassword.val())==""){
+                                    alert("닉네임을 입력하세요.");
+                                    pPassword.focus();
+                                    return;
+                                }else if($.trim(pText.val())==""){
+                                    alert("내용을 입력하세요.");
+                                    pText.focus();
+                                    return;
+                                }
+                                  
+                                var commentParentText = '<tr id="r1" name="commentParentCode">'+
+                                                            '<td colspan=2>'+
+                                                                '<strong>'+pName.val()+'</strong> '+pPassword.val()+' <a style="cursor:pointer;" name="pAdd">답글</a> | <a style="cursor:pointer;" name="pDel">삭제</a><p>'+pText.val().replace(/\n/g, "<br>")+'</p>'+
+                                                            '</td>'+
+                                                        '</tr>';
+                                  
+                                //테이블의 tr자식이 있으면 tr 뒤에 붙인다. 없으면 테이블 안에 tr을 붙인다.
+                                if($('#commentTable').contents().size()==0){
+                                    $('#commentTable').append(commentParentText);
+                                }else{
+                                    $('#commentTable tr:last').after(commentParentText);
+                                }
+                                  
+                                $("#commentParentName").val("");
+                                $("#commentParentPassword").val("");
+                                $("#commentParentText").val("");
+                                  
+                            });
+                              
+                            //댓글의 댓글을 다는 이벤트
+                            $(document).on("click","#commentChildSubmit", function(){
+                                  
+                                var cName = $("#commentChildName");
+                                var cPassword = $("#commentChildPassword");
+                                var cText = $("#commentChildText");
+                                  
+                                if($.trim(cName.val())==""){
+                                    alert("이름을 입력하세요.");
+                                    cName.focus();
+                                    return;
+                                }else if($.trim(cPassword.val())==""){
+                                    alert("패스워드를 입력하세요.");
+                                    cPassword.focus();
+                                    return;
+                                }else if($.trim(cText.val())==""){
+                                    alert("내용을 입력하세요.");
+                                    cText.focus();
+                                    return;
+                                }
+                                  
+                                var commentChildText = '<tr name="commentChildCode">'+
+                                                            '<td style="width:1%"><span class="glyphicon glyphicon-arrow-right"></span></td>'+
+                                                            '<td style="width:99%">'+
+                                                                '<strong>'+cName.val()+'</strong> '+cPassword.val()+' <a style="cursor:pointer;" name="cAdd">답글</a> | <a style="cursor:pointer;" name="cDel">삭제</a>'+
+                                                                '<p>'+cText.val().replace(/\n/g, "<br>")+'</p>'+
+                                                            '</td>'+
+                                                        '</tr>';
+                                                          
+                                //앞의 tr노드 찾기
+                                var prevTr = $(this).parent().parent().parent().parent().prev();
+                                //댓글 적는 에디터 삭제
+                                $("#commentEditor").remove();//여기에서 삭제를 해줘야 에디터tr을 안 찾는다.
+                                  
+                                //댓글을 타고 올라가며 부모 tr을 찾음
+                                while(prevTr.attr("name")!="commentParentCode"){
+                                    prevTr = prevTr.prev();
+                                }
+                                //while를 타는지 체크
+                                var check = false;
+                                //다음 노드가 댓글(depth1)의 댓글인지 찾기위해 next
+                                var nextTr = prevTr.next();
+                                //뒤에 댓글(depth1)의 댓글(depth2_1)이 없다면 바로 붙인다.
+                                if(nextTr.attr("name")!="commentChildCode"){
+                                    prevTr.after(commentChildText);
+                                }else{
+                                    //댓글(depth1)의 댓글(depth2_n)이 있는경우 마지막까지 찾는다.
+                                    while(nextTr.attr("name")=="commentChildCode"){
+                                        nextTr = nextTr.next();
+                                        check = true;
+                                    }
+                                }
+                                  
+                                if(check){//댓글(depth1)의 댓글(depth2_n)이 있다면 그 댓글(depth2_n) 뒤에 댓글(depth2_n+1) 추가
+                                    nextTr = nextTr.prev();//while문에서 검색하느라 next로 넘거갔던거 다시 앞으로 돌려줌
+                                    nextTr.after(commentChildText);
+                                }
+                                  
+                            });
+                              
+                            //답글링크를 눌렀을때 에디터 창을 뿌려주는 이벤트, 삭제링크를 눌렀을때 해당 댓글을 삭제하는 이벤트
+                            $(document).on("click","table#commentTable a", function(){//동적으로 버튼이 생긴 경우 처리 방식
+                                  
+                                if($(this).attr("name")=="pDel"){
+                                    if (confirm("답글을 삭제 하시면 밑에 답글도 모두 삭제 됩니다. 정말 삭제하시겠습니까?") == true){    //확인
+                                          
+                                        var delComment = $(this).parent().parent();
+                                        var nextTr = delComment.next();
+                                        var delTr;
+                                        //댓글(depth1)의 댓글(depth2_1)이 있는지 검사하여 삭제
+                                        while(nextTr.attr("name")=="commentCode"){
+                                            nextTr = nextTr.next();
+                                            delTr = nextTr.prev();//삭제하고 넘기면 삭제되서 없기 때문에 다음값을 가져오기 어려워 다시 앞으로 돌려서 찾은 다음 삭제
+                                            delTr.remove();
+                                        }
+                                          
+                                        delComment.remove();
+                                          
+                                    }else{   //취소
+                                        return;
+                                    }
+                                }else if($(this).attr("name")=="cDel"){
+                                    if (confirm("정말 삭제하시겠습니까??") == true){    //확인
+                                        $(this).parent().parent().remove();
+                                    }else{   //취소
+                                        return;
+                                    }
+                                }else{
+                                    //자기 부모의 tr을 알아낸다.
+                                    var parentElement = $(this).parent().parent();
+                                    //댓글달기 창을 없앤다.
+                                    $("#commentEditor").remove();
+                                    //부모의 하단에 댓글달기 창을 삽입
+                                    var commentEditor = '<tr id="commentEditor">'+
+                                                            '<td style="width:1%"> </td>'+
+                                                            '<td>'+
+                                                                '<span class="form-inline" role="form">'+
+                                                                    '<p>'+
+                                                                        '<div class="form-group">'+
+                                                                            '<input type="text" id="commentChildName" name="commentChildName" class="form-control col-lg-2" data-rule-required="true" placeholder="이름" maxlength="10">'+
+                                                                        '</div>'+
+                                                                        '<div class="form-group">'+
+                                                                            ' <input type="password" id="commentChildPassword" name="commentChildPassword" class="form-control col-lg-2" data-rule-required="true" placeholder="패스워드" maxlength="10">'+
+                                                                        '</div>'+
+                                                                        '<div class="form-group">'+
+                                                                            '<button type="button" id="commentChildSubmit" class="btn btn-default">확인</button>'+
+                                                                        '</div>'+
+                                                                    '</p>'+
+                                                                        '<textarea id="commentChildText" name="commentChildText" class="form-control" style="width:98%" rows="4"></textarea>'+
+                                                                '</span>'+
+                                                            '</td>'+
+                                                        '</tr>';
+                                                          
+                                    parentElement.after(commentEditor); 
+                                }
+                                  
+                            });
+                              
+                            $( "#list" ).click(function( event ) {
+                                location.href='/community/notice';
+                            });
+                            $( "#modify" ).click(function( event ) {
+                                location.href='/community/modify/notice/${community.id}';
+                            });
+                            $( "#delete" ).click(function( event ) {
+                                location.href='/community/delete/notice/${community.id}';
+                            });
+                            $( "#write" ).click(function( event ) {
+                                location.href='/community/notice/edit';
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+            
+        </div>
+              </div>
+              <div class="modal-footer">
+              
+
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group">
+    <!-- 버튼태그 -->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    메뉴버튼
+    <!-- 버튼태그 우측 메뉴출력을 위한 화살표표시
+        (없어도 무관하나 메뉴버튼이라는것을 알려주기 위함) -->
+    <span class="caret"></span>
+    </button>
+    <!--메뉴버튼 클릭시 하단 표출된 리스트 영역  -->
+    <ul class="dropdown-menu" >
+        <!-- 메뉴1 -->
+        <li><a href="#">메뉴1</a></li>
+        <!-- 메뉴2 -->
+        <li><a href="#">메뉴2</a></li>
+    </ul>
+</div>
+
+
+        <ul class="list-group" id="tb_s" style="float: left; " >
+          <li class="list-group-item"  style="margin:0%; padding:0%;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s1" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s1" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s1" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s1" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s3" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s2" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s2" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s2" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <ul class="list-group" id="tb_s2" style="float: left" border="1px">
+          <li class="list-group-item" style="margin:0px; padding:0px;">
+                <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                </div></li>
+          <li class="list-group-item"><h3>내 이름은 칸</h3>
+                <div class="button1">
+                    <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                    <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                </div></li>
+        </ul>
+
+        <table border="1px" id="m1" style="float: left">
+            <tr>
+                <td><a href="#open"><img src="images/kan.jpg"></a></td>
+                <div class="white_content"  id="open">
+                    <div class="wholeModal">
+                        <div class="modaltable1" style="float:right">
+                            <img src="images/kan.jpg">
+                        </div>
+                        <div class ="writes">
+                            <div class="writeArea">
+                                <h2> <span>내 이름은 칸</span></h2>
+                                My name is Khan
+                            </div>
+                            <br>
+                            <div class="writeInfo">
+                                <li> <strong>감독 : F 그레이</strong></li>
+                                <li> 출연진 : A, B, C, D, E </li>
+                                <li> 장르 : 액션, 드라마 </li>
+                                <li> 개봉일 ; 2017. 02. 03</li>
+                                <li>  등급 : 15세 관람가</li>
+                                <li>  홈페이지 : http://www.naver.com</li>
+                                <li>  관객 수 : n 명 별점 4.5점</li>
+                            </div>
+                        <a href="#close">
+                            <div class="button2">
+                                <button type="button" class="btn btn-default btn-lg">닫기</button></a>
+                            </div>
+                    </div>
+                </div>
+            </tr>
+            <tr>
+                <td> <p><h3>내 이름은 칸</h3></p>
+                <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg" data-target="#layerpop" data-toggle="modal">예매하기</button>
+                        </div>
+                 </td>
+            </tr>
+        </table>
+       
+            <table border="1px" id="m2" style="float: left">
+                <tr>
+                    <td>
+                        <div class="pic1">
+                            <a href="#myModal"data-toggle="modal"> <img src="images/kan.jpg" > </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <p><h3>King'sMan</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        
+        <table border="1px" id="m2" style="float: left">
+            <tr>
+                <td><img src="images/kan.jpg"></td>
+            </tr>
+            <tr>
+                <td>
+                 <p><h3>괴물</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div>
+                        </td>
+            </tr>
+        </table>
+        <table border="1px" id="m2" style="float: left">
+            <tr>
+                <td><img src="images/kan.jpg"></td>
+            </tr>
+            <tr>
+                <td> <p><h3>암살</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div> </td>
+            </tr>
+        </table>
+        <table border="1px" id="m2" style="float: left">
+            <tr>
+                <td><img src="images/kan.jpg"></td>
+            </tr>
+            <tr>
+                <td> <p><h3>암살1</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div> </td>
+            </tr>
+        </table>
+        <table border="1px" id="m1" style="float: left">
+            <tr>
+                <td><img src="images/kan.jpg"></td>
+            </tr>
+            <tr>
+                <td> <p><h3>암살1</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div> </td>
+            </tr>
+        </table>
+        <table border="1px" id="m3" style="float: left">
+            <tr>
+                <td><img src="images/kan.jpg"></td>
+            </tr>
+            <tr>
+               <td> <p><h3>암살3</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div> </td>
+            </tr>
+        </table>
+        <table border="1px" id="m3" style="float: left">
+            <tr>
+                <td><img src="images/kan.jpg"></td>
+            </tr>
+            <tr>
+                <td> <p><h3>암살4</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div> </td>
+            </tr>
+        </table>    
+        <table border="1px" id="m3" style="float: left">
+            <tr>
+                <td><img src="images/kan.jpg"></td>
+            </tr>
+            <tr>
+                <td> <p><h3>암살5</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div> </td>
+            </tr>
+        </table> 
+        <table border="1px" id="m3" style="float: left">
+            <tr>
+                <td><img src="images/kan.jpg"></td>
+            </tr>
+            <tr>
+                <td> <p><h3>암살6</h3> </p>
+                        <div class="button1">
+                        <button type="button" class="btn btn-default btn-lg">상세정보</button>
+                        <button type="button" class="btn btn-default btn-lg">예매하기</button>
+                        </div> </td>
+            </tr>
+        </table>  
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/star.js"></script>
+</body>
+</html>
