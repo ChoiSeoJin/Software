@@ -100,4 +100,10 @@ function onYouTubeIframeAPIReady() {
                     (player.getPlayerState() === 1) ? player.pauseVideo() : player.playVideo();
                 });
               }
-
+$(".storediv").click(function() {
+    var nowActive = $(".active");
+    nowActive.removeClass("active");
+    nowActive.addClass("inactive"); 
+    $(".storepage").removeClass("inactive");
+    $(".storepage").addClass("active");
+});
