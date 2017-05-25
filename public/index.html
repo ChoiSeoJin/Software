@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" type="text/css" href="./reservation.css" />
-  <script type="text/javascript" src="calendar.js'/>"></script>
+  <script type="text/javascript" src="calendar.js"/></script>
+  <script src="seat.js"></script>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <link rel="stylesheet" href="=./datapicker/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="./datapicker/jquery-ui.js"></script>
@@ -39,7 +39,7 @@
 
 	<div class="buttons">
 		<button class="nowshowingbtn clicked">NOW SHOWING</button>
-		<button class="comingsoonbtn unclicked">COMING SOON</btn>
+		<button class="comingsoonbtn unclicked">COMING SOON</button>
 	</div>
 
 	<div class="movieareadiv">
@@ -262,6 +262,8 @@
 
 <!--########################################### theater div ###########################################-->
 <div class="theaterpage inactive">
+
+dddd
 </div>
 <!--########################################### theater div ###########################################-->
 
@@ -269,49 +271,25 @@
 
 <!--########################################### reservation div ###########################################-->
 <div class="reservationpage inactive">
+   <div class="cal">
+   	<div></div>
+  	 </div>
 
-  <script>
- $(document).ready(function() {
-    $("#dp").datepicker({
-
-        onSelect: function(dateText, inst) {
-            this.value=dateText;
-        },
-        beforeShow: function (event, ui) {
-            var $link = $("#datep");
-            ui.dpDiv.offset({
-                top: $link.offset().top + 10,
-                left: $link.offset().left + 10
-            });
-        }
-    });
-
-    $("#datep").click(function() {
-        $("#dp").datepicker("show");
-    });
-});
-</script>
-	<div>
-			상영 스케줄
-	</div>
-
-    <div class="date_data">
-        <script>
-        $(function(){
-          $('.dp').appendDtpicker({'locale':'ko'});
-        });
-        </script>
-        <li class="showdates">
-            <a href="#" id="datep"> 21</a>
-        </li>
-         <li class="showdates">
-            <a href="#" id="datep"> 21</a>
-        </li>
-            
-        
-        <input type="hidden" id="dp" />
-        <div></div>
-    </div>
+          <div class = "content">
+         <div class = "theater"><div class = "theater-head"><p>극장</p></div>
+          
+          <div class = "theater-select" >
+              <div class = "theater-area-list">
+                            <div><a href="#">서울</a></div>
+                            <div><a href="#">경기</a></div>
+                            <div><a href="#">인천</a></div>
+              </div>
+              <div class ="theater-list">asdf</div>
+              </div>
+          </div>
+         
+          <div class="time_table">
+          	<div class = "time_table-head"><p>상영시간표</p></div>
             <ul>
                 <li class= "reservation_list">
                     <div class= "listing-info">
@@ -319,11 +297,11 @@
                             <div class = "_name">내이름은칸</div>
                         </div>
                     </div>
-                    <div class = "reservation_body">
-                            <div><a>5 : 00</a></div>
-                             <div><a>5 : 00</a></div>
-                              <div><a>5 : 00</a></div>
-                               <div><a>5 : 00</a></div>
+                    <div class = "body">
+                            <div><a class="seatlayout">5 : 00</a></div>
+                               <div><a class="seatlayout">5 : 00</a></div>
+                                <div><a class="seatlayout">5 : 00</a></div>
+                                  <div><a class="seatlayout">5 : 00</a></div>
                     </div>
                 </li>
 
@@ -333,7 +311,36 @@
                             <div class = "_name">내이름은칸</div>
                         </div>
                     </div>
-                    <div class = "reservation_body">
+                    <div class = "body">
+                              <div><a class="seatlayout">5 : 00</a></div>
+                                 <div><a class="seatlayout">5 : 00</a></div>
+                                    <div><a class="seatlayout">5 : 00</a></div>
+                                       <div><a class="seatlayout">5 : 00</a></div>
+                                          <div><a class="seatlayout">5 : 00</a></div>
+                    </div>
+                </li> 
+
+                <li class= "reservation_list">
+                    <div class= "listing-info">
+                        <div class="details">
+                            <div class = "_name">내이름은칸</div>
+                        </div>
+                    </div>
+                    <div class = "body">
+                              <div><a class="seatlayout">5 : 00</a></div>
+                                 <div><a class="seatlayout">5 : 00</a></div>
+                                    <div><a class="seatlayout">5 : 00</a></div>
+                                       <div><a class="seatlayout">5 : 00</a></div>
+                                          <div><a class="seatlayout">5 : 00</a></div>
+                </li> 
+
+                <li class= "reservation_list">
+                    <div class= "listing-info">
+                        <div class="details">
+                            <div class = "_name">내이름은칸</div>
+                        </div>
+                    </div>
+                    <div class = "body">
                             <div><a href = "seatlayout.html">5 : 00</a></div>
                              <div><a href = "seatlayout.html">5 : 00</a></div>
                               <div><a href = "seatlayout.html">5 : 00</a></div>
@@ -341,10 +348,33 @@
                     </div>
                 </li> 
             </ul>
+          </div>
+		</div>
+ </div>
 
-        
-
+<div class="seatlayout active">
+ 		<div class="reservation_summary">
+ 			<div class="movie_info">
+ 				
+ 			</div>
+ 			<div class="number_info">
+ 				<div class="senior">
+ 				<span class="title">일반</span>
+		
+ 					<script>numberCnt('.senior');</script>
+ 				</div>
+ 				<div class="junior">
+ 				<span class="title">청소년</span>
+ 					<script>numberCnt('.junior');</script>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class="seatlayout"></div>
+ 		<script>
+ 		seatlayout();
+ 		</script>
 </div>
+
 <!--########################################### reservation div ###########################################-->
 
 
