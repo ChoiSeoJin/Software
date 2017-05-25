@@ -1,22 +1,4 @@
 function seatlayout(){
-
-   
-   
- 
-}
-function numberCnt(e){
-	
-		$(e).append("<ul></ul>"); 
-	
-		for(var i=0;i<10;i++)
-		$(e+' ul').append("<li class='selected' id=selected_"+i+"><a id=data_"+i+">"+i+"</a></li>"); 
-}
-$("#data_1").click(function() {
-	alert("111");
-	
-
-});
-=======
 	var seatname=['A','B','C','D','E','F','G','H','I','J','K','L','M'];
 	$(".layout").append("<table class='seat_table' cellspacing='0' cellpadding='0' style='width:75%'></table>");
 	
@@ -71,4 +53,3 @@ function cnt_selected(i){
 	    	obj.className='cnt_Selected';
 	    }
 }*/
-

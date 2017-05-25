@@ -28,10 +28,12 @@ ul{
 	height : 332px;
 
 }
+
 .cnt_Selected{
 	background-color: black;
 	
 }
+
 .reservationpage{
 	width:1000px;
 	margin : 0 auto;
@@ -279,7 +281,6 @@ ul .reservation_list .body>div a{
 	display: inline-block;
 
 }
-
 .layout .seat_table tr td div{
 	float :left;
 	margin: 4px 2px;
