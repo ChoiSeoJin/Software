@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/cmsbackup.css" rel="stylesheet">
-
+   
 </head>
 
 <body>
@@ -36,6 +36,7 @@
     </div>
 
     <div class="mainpage active">
+
         <div class="home-hero ">
             <div id="heroVideoTvScreen" class="home-hero-video-iframe"></div>
         </div>
@@ -434,7 +435,7 @@
             <h1 style=" font-size: 35px;"><strong>베드시네마 강남</strong></h1>
             강남의 중심! 강남 소비문화의 중심지인 지하철 2호선 , 신분당선 - 강남역과 연결<br> 로맨틱 멀티플렉스! 젊은 도시 강남이 한 눈에 보이는 최상의 View를 제공 <br>
             <프라다>가 선택한 수려한 디자인의 상영관 의자를 체험해보세요!<br><br>
-                <img src="img/Kangnamimg.jpg" style="width:auto; height:auto;" />
+                <img src="img/Kangnamimg.jpg" style="width:800px; height:400px;" />
                 <div class="Ttable" style="margin-bottom: 100px">
                     <h3 style="font-size:25px; border-bottom:1px solid #e1e1e1; margin-bottom:20px;"> 상영시간표</h3>
                 </div>
@@ -561,8 +562,6 @@
             </div>
         </div>
 
-
-
     </div>
     <!--########################################### theater div ###########################################-->
 
@@ -643,10 +642,10 @@
                             </div>
                         </div>
                         <div class="body">
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
+                            <div><a class="seatlayout">5 : 00</a></div>
                         </div>
                     </li>
                 </ul>
@@ -655,6 +654,7 @@
         </div>
 
         <div class="seatlayout inactive">
+
             <div class="reservation_summary">
                 <div class="movie_info">
 
@@ -664,25 +664,28 @@
                         <span class="title">일반</span>
 
                         <script>
-                            numberCnt('.senior');
+                            numberCnt('senior');
                         </script>
                     </div>
                     <div class="junior">
                         <span class="title">청소년</span>
                         <script>
-                            numberCnt('.junior');
+                            numberCnt('junior');
                         </script>
                     </div>
                 </div>
             </div>
-            <div class="seatlayout"></div>
-            <script>
-                seatlayout();
-            </script>
+            <div class="seat">
+                <div class="screen" title="SCREEN">
+                    <span class="text">SCREEN</span>
+                </div>
+                <div class="layout" id="layout">
+                    <script>seatlayout();</script>
+                </div>
+            </div>
         </div>
 
         <!--########################################### reservation div ###########################################-->
-
 
 
         <!--########################################### Store div ###########################################-->
@@ -710,7 +713,6 @@
     </div>
 </div>
 <!--########################################### Store div ###########################################-->
-
 
         <!--########################################### login div ###########################################-->
         <div class="loginpage inactive">

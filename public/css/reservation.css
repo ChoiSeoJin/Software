@@ -29,6 +29,11 @@ ul{
 
 }
 
+.cnt_Selected{
+	background-color: black;
+	
+}
+
 .reservationpage{
 	width:1000px;
 	margin : 0 auto;
@@ -55,11 +60,9 @@ ul{
 	
 }
 .reservation_summary .number_info{
-	
-	width :50%;
 	height: 130px;
 	display: block;
-	left:600px;
+	left:50%;
 	position: absolute;
 	padding : 20px 0 0 15px ;
 }
@@ -99,8 +102,6 @@ ul{
  	height: 22px;
  	line-height: 22px;
  	color : white;
- 	margin-top: 15px;
- 	
 }
 .reservation_summary .number_info .junior{
 
@@ -280,25 +281,93 @@ ul .reservation_list .body>div a{
 	display: inline-block;
 
 }
-  .slider {
+.layout .seat_table tr td div{
+	float :left;
+	margin: 4px 2px;
+	font-size: 14px;
+	color: #b3b3b3;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+border-radius : 26%;
+	font-family: Verdana;
+	font-weight: bold;
+}
+.layout .seat_table tr td div span{
+	display: block;
+	padding-top:5px;
+}
+.layout .seat_table tr td div a{
+	border:1px solid #49ba8e;
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius : 26%;
+	color : #ccc;
+	font-weight: bold;
+padding-top: 5px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-decoration: none;
+
+}
+.layout .seat_table{
+	display: block;
+	margin : 0 auto;	
+}
+
+.layout .seat_table tr{
+	
+	margin-top: 1px;
+	font-size: 14px;
+	color: #b3b3b3;
+	width: 20px;
+	height: 20px;
+}
+.seat{
+		margin-top: 4%;
+		height: 1000px;
+
+}
+.Row_Col_Selected{
+	background-color: #49ba8e;
+	color: white;
+}
+.seat .screen{
+	background-color : #f4f4f4;
+	height: 25px;
+	margin: 0 auto;
+	width :50%;
+	line-height: 25px;
+	margin-bottom: 3%;
+	text-align: center;
+}
+.seat .screen span{
+	width: 57px;
+	height: 25px;
+	display: inline-block;
+	zoom :1;
+
+}
+.slider {
         width: 50%;
         margin: 30px;
-    }
+}
 
-    .slick-slide {
+.slick-slide {
       margin: 0px 20px;
     }
 
-    .slick-slide img {
+.slick-slide img {
       width: 100%;
     }
 
-    .slick-prev:before,
-    .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
         color: black;
     }
 
-    .als-container {
+.als-container {
 	position: relative;
 	width: 100%;
 	margin: 0px auto;
