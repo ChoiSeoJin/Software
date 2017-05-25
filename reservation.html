@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+
+<head>
+<link rel="stylesheet" type="text/css" href="./reservation.css" />
+<script type="text/javascript" src="calendar.js'/>"></script>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="=./datapicker/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="./datapicker/jquery-ui.js"></script>
+
+  <script>
+ $(document).ready(function() {
+    $("#dp").datepicker({
+
+        onSelect: function(dateText, inst) {
+            this.value=dateText;
+        },
+        beforeShow: function (event, ui) {
+            var $link = $("#datep");
+            ui.dpDiv.offset({
+                top: $link.offset().top + 10,
+                left: $link.offset().left + 10
+            });
+        }
+    });
+
+    $("#datep").click(function() {
+        $("#dp").datepicker("show");
+    });
+});
+</script>
+</head>
+<body>
+    <div>
+        <script>
+        $(function(){
+          $('.dp').appendDtpicker({'locale':'ko'});
+        });
+        </script>
+        <div class="cal">
+            <a href="#" id="datep"> ddds</a>
+        
+        </div>
+        <input type="hidden" id="dp" />
+        <div></div>
+    </div>
+            <ul>
+                <li class= "reservation_list">
+                    <div class= "listing-info">
+                        <div class="details">
+                            <div class = "_name">내이름은칸</div>
+                        </div>
+                    </div>
+                    <div class = "body">
+                            <div><a>5 : 00</a></div>
+                             <div><a>5 : 00</a></div>
+                              <div><a>5 : 00</a></div>
+                               <div><a>5 : 00</a></div>
+                    </div>
+                </li>
+
+                 <li class= "list">
+                    <div class= "listing-info">
+                        <div class="details">
+                            <div class = "_name">내이름은칸</div>
+                        </div>
+                    </div>
+                    <div class = "body">
+                            <div><a href = "seatlayout.html">5 : 00</a></div>
+                             <div><a href = "seatlayout.html">5 : 00</a></div>
+                              <div><a href = "seatlayout.html">5 : 00</a></div>
+                               <div><a href = "seatlayout.html">5 : 00</a></div>
+                    </div>
+                </li> 
+            </ul>
+
+        
+    
+</body>
+
+</html>
