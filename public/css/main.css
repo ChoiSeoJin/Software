@@ -188,7 +188,7 @@ span, body, div, img, button {
 .stars {
 	width: auto;
 	height: 40px;
-	padding-top:10px;
+		
 	padding-left: 10px;
 	padding-right:15px;
 	border-bottom: 0.5px solid;
