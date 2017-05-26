@@ -1,59 +1,54 @@
 $(".nowplayingdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".nowplayingpage").removeClass("inactive");
-    $(".nowplayingpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".nowplayingpage").removeClass("pageinactive");
+    $(".nowplayingpage").addClass("pageactive");
 });
 $(".upcomingdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".upcomingpage").removeClass("inactive");
-    $(".upcomingpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".upcomingpage").removeClass("pageinactive");
+    $(".upcomingpage").addClass("pageactive");
 });
 $(".theaterdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".theaterpage").removeClass("inactive");
-    $(".theaterpage").addClass("active");
-    $(".kangnamtheater").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".theaterpage").removeClass("pageinactive");
+    $(".theaterpage").addClass("pageactive");
 });
 $(".reservationdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".reservationpage").removeClass("inactive");
-    $(".reservationpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".reservationpage").removeClass("pageinactive");
+    $(".reservationpage").addClass("pageactive");
 });
 $(".seatlayout").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".seatlayout").removeClass("inactive");
-    $(".seatlayout").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".seatlayout").removeClass("pageinactive");
+    $(".seatlayout").addClass("pageactive");
     
 });
 
 $(".homeicondiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".mainpage").removeClass("inactive");
-    $(".mainpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".mainpage").removeClass("pageinactive");
+    $(".mainpage").addClass("pageactive");
 });
 $(".bookbtn").click(function(){
-   var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".reservationpage").removeClass("inactive");
-    $(".reservationpage").addClass("active");
+   var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".reservationpage").removeClass("pageinactive");
+    $(".reservationpage").addClass("pageactive");
 });
-$(".login").click(function() {
-    alert("login");
-});
-
 $(".nowshowingbtn").click(function() {
     var me = $(this);
     var other = $(".comingsoonbtn");
@@ -75,19 +70,37 @@ $(".comingsoonbtn").click(function() {
 $(".kangnambtn").click(function() {
     var me = $(".kangnamtheater");
     var other = $(".kuritheater");
-    other.removeClass("active");
-    other.addClass("inactive");
-    me.removeClass("inactive");
-    me.addClass("active");
+    other.removeClass("theateractive");
+    other.addClass("theaterinactive");
+    me.removeClass("theaterinactive");
+    me.addClass("theateractive");
 });
 
 $(".kuribtn").click(function() {
     var me = $(".kuritheater");
     var other = $(".kangnamtheater");
-    other.removeClass("active");
-    other.addClass("inactive");
-    me.removeClass("inactive");
-    me.addClass("active");
+    other.removeClass("theateractive");
+    other.addClass("theaterinactive");
+    me.removeClass("theaterinactive");
+    me.addClass("theateractive");
+});
+
+$(".signupstr").click(function() {
+    var me = $(".signinarea");
+    var other = $(".signuparea");
+    me.removeClass("signactive");
+    me.addClass("signinactive");
+    other.removeClass("signinactive");
+    other.addClass("signactive");
+});
+
+$(".signinstr").click(function() {
+    var me = $(".signuparea");
+    var other = $(".signinarea");
+    me.removeClass("signactive");
+    me.addClass("signinactive");
+    other.removeClass("signinactive");
+    other.addClass("signactive");
 });
 
 
