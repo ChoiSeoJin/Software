@@ -36,7 +36,9 @@
         <div class="logindiv">LOGIN</div>
     </div>
 
+
     <div class="mainpage active">
+
         <div class="home-hero ">
             <div id="heroVideoTvScreen" class="home-hero-video-iframe"></div>
         </div>
@@ -513,14 +515,8 @@
                 <div class="theater-head">
                     <p>극장</p>
                 </div>
-                <div class="theater-select">
-                    <div class="theater-area-list">
-                        <div><a href="#">서울</a></div>
-                        <div><a href="#">경기</a></div>
-                        <div><a href="#">인천</a></div>
-                    </div>
-                    <div class="theater-list">asdf</div>
-                </div>
+
+
             </div>
             <div class="time_table">
                 <div class="time_table-head">
@@ -528,92 +524,42 @@
                 </div>
 
                 <ul>
-                    <li class="reservation_list">
-                        <div class="listing-info">
-                            <div class="details">
-                                <div class="_name">내이름은칸</div>
-                            </div>
-                        </div>
-                        <div class="body">
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                        </div>
-                    </li>
-
-                    <li class="reservation_list">
-                        <div class="listing-info">
-                            <div class="details">
-                                <div class="_name">내이름은칸</div>
-                            </div>
-                        </div>
-                        <div class="body">
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                        </div>
-                    </li>
-
-                    <li class="reservation_list">
-                        <div class="listing-info">
-                            <div class="details">
-                                <div class="_name">내이름은칸</div>
-                            </div>
-                        </div>
-                        <div class="body">
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                            <div><a class="seatlayout">5 : 00</a></div>
-                    </li>
-
-                    <li class="reservation_list">
-                        <div class="listing-info">
-                            <div class="details">
-                                <div class="_name">내이름은칸</div>
-                            </div>
-                        </div>
-                        <div class="body">
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                            <div><a href="seatlayout.html">5 : 00</a></div>
-                        </div>
-                    </li>
                 </ul>
-                </div>
+            </div>
             </div>
         </div>
 
-        <div class="seatlayout inactive">
+        <div class="seatlayout active">
             <div class="reservation_summary">
                 <div class="movie_info">
-
+                    <div class="movie_img">a</div>
+                    <div class="movie_text">
+                        <div class="movie_name">b</div>
+                        <div class="movie_theater">c</div>
+                        <div class="movie_date">d</div>
+                        <div class="movie_theater_number">e</div>
+                    </div>
                 </div>
                 <div class="number_info">
                     <div class="senior">
                         <span class="title">일반</span>
-
-                        <script>
-                            numberCnt('.senior');
-                        </script>
                     </div>
                     <div class="junior">
                         <span class="title">청소년</span>
-                        <script>
-                            numberCnt('.junior');
-                        </script>
                     </div>
                 </div>
             </div>
-            <div class="seatlayout"></div>
-            <script>
-                seatlayout();
-            </script>
+
+            <div class="seat">
+                <div class="screen" title="SCREEN">
+                    <span class="text">SCREEN</span>
+                </div>
+                <div class="layout" id="layout">
+                    <script>seatlayout();</script>
+                </div>
+            </div>
+
+
         </div>
 
         <!--########################################### reservation div ###########################################-->
@@ -635,7 +581,8 @@
                             <h1> <span>내 이름은 칸</span></h1>My name is Khan
                             <div class="wholeModal">
                                 <div class="modaltable1" style="float:left;">
-                                    <img src="images/kan.jpg" style="height:auto; width:200px;">
+                                    <img src="img/kan.jpg" style="height:auto; width:200px;">
+
                                 </div>
                                 <div class="writes">
                                     <div class="writeInfo">
