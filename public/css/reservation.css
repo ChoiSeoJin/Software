@@ -32,6 +32,37 @@ ul{
 	background-color: black;
 	
 }
+
+.movie_info .movie_img{
+	background-color: white;
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+.movie_info .movie_text{
+	margin-left: 20px;
+	display: inline-block;
+	width: 60%;
+}
+
+.movie_text div{
+	
+	margin-top: 10px;
+	width: 100%;
+	padding-left:10px;
+}
+.movie_name{
+	background-color: yellow;
+}
+.movie_theater{
+	background-color: blue;
+}
+.movie_date{
+	background-color: black;
+}
+.movie_theater_number{
+	background-color: white;
+}
 .reservationpage{
 	width:1000px;
 	margin : 0 auto;
@@ -51,7 +82,7 @@ ul{
 }
 .reservation_summary .movie_info{
 	
-	width : 40%;
+	width : 50%;
 	height: 100%;
 	
 	float : left;
@@ -189,7 +220,7 @@ p{
 
 
 }
-.time_table ul .reservation_list{
+.time_table ul li{
 	display:inline-block;
 	width :90%;
 	zoom : 1;
@@ -204,21 +235,21 @@ p{
 	width :30%;
 
 }
-ul .reservation_list > div{
+.time_table ul li > div{
 	float : left;
 	text-align : left;
 	font-weight:400;
 	margin-top:8px;
 	padding-left: 20px;
 }
-ul .reservation_list .listing-info .details{
+.time_table ul li .listing-info .details{
 	float : left;
 	margin-top:5px;
 	padding-left:5px;
 	display : table;
 	width :100%;
 }
-ul .reservation_list .body{
+.time_table ul li .body{
 	float : left;
 	width : 60%;
 	font-family: Montserrat,sans-serif;
@@ -228,7 +259,7 @@ ul .reservation_list .body{
 }
 
 
-ul .reservation_list .listing-info .details ._name{
+.time_table ul li .listing-info .details ._name{
 	display : table-cell;
 	vertical-align : top;
 	font-size:12px;
@@ -241,7 +272,7 @@ ul .reservation_list .listing-info .details ._name{
 	
 	
 }
-ul .reservation_list .body>div{
+.time_table ul li .body>div{
 	float : left;
 	position : relative;
 	width:50px;
@@ -254,7 +285,7 @@ ul .reservation_list .body>div{
 	color : #0066ff;
 	border-radius : 2px;
 }
-ul .reservation_list .body>div a{
+.time_table ul li .body>div a{
 	float : left;
 	font-size : 10px;
 	display :inline-block;
