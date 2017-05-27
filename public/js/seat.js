@@ -36,7 +36,6 @@ $('.movie_info').ready(function(){
 		
 		//var movie_name = $('.reservation_list_'+i+ ' div div ._name').text();
 		var movie_theater =$(data_id).text();
-
 		var movie_theater_number;
 		
 		alert(movie_name);
@@ -103,3 +102,15 @@ function seatlayout(){
 		$(".seat_table"+' tr').append("</tr>");
    }
  }
+
+/*
+function cnt_selected(i){
+	alert(i+"명");
+	var obj = document.getElementById("data_"+i);
+  	if(obj.className=='cnt_Selected'){
+	    	obj.className='.layout .seat_table tr td div';
+	    }
+	    else{
+	    	obj.className='cnt_Selected';
+	    }
+}*/

@@ -18,6 +18,7 @@ $(".theaterdiv").click(function() {
     nowActive.addClass("inactive"); 
     $(".theaterpage").removeClass("inactive");
     $(".theaterpage").addClass("active");
+    $(".kangnamtheater").addClass("active");
 });
 $(".reservationdiv").click(function() {
     var nowActive = $(".active");
@@ -71,6 +72,25 @@ $(".comingsoonbtn").click(function() {
     me.addClass("clicked");
 });
 
+$(".kangnambtn").click(function() {
+    var me = $(".kangnamtheater");
+    var other = $(".kuritheater");
+    other.removeClass("active");
+    other.addClass("inactive");
+    me.removeClass("inactive");
+    me.addClass("active");
+});
+
+$(".kuribtn").click(function() {
+    var me = $(".kuritheater");
+    var other = $(".kangnamtheater");
+    other.removeClass("active");
+    other.addClass("inactive");
+    me.removeClass("inactive");
+    me.addClass("active");
+});
+
+
 
 function onYouTubeIframeAPIReady() {
                 var player;
@@ -100,4 +120,10 @@ function onYouTubeIframeAPIReady() {
                     (player.getPlayerState() === 1) ? player.pauseVideo() : player.playVideo();
                 });
               }
-
+$(".storediv").click(function() {
+    var nowActive = $(".active");
+    nowActive.removeClass("active");
+    nowActive.addClass("inactive"); 
+    $(".storepage").removeClass("inactive");
+    $(".storepage").addClass("active");
+});

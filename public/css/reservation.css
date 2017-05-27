@@ -32,7 +32,6 @@ ul{
 	background-color: black;
 	
 }
-
 .movie_info .movie_img{
 	background-color: white;
 	width: 30%;
@@ -63,7 +62,6 @@ ul{
 .movie_theater_number{
 	background-color: white;
 }
-
 .reservationpage{
 	width:1000px;
 	margin : 0 auto;
@@ -91,13 +89,9 @@ ul{
 	
 }
 .reservation_summary .number_info{
-	
-
-	
 	height: 130px;
 	display: block;
 	left:50%;
-
 	position: absolute;
 	padding : 20px 0 0 15px ;
 }
@@ -137,7 +131,6 @@ ul{
  	height: 22px;
  	line-height: 22px;
  	color : white;
-
 }
 .reservation_summary .number_info .junior{
 
@@ -333,7 +326,6 @@ p{
 	display: inline-block;
 
 }
-
 .layout .seat_table tr td div{
 	float :left;
 	margin: 4px 2px;
@@ -421,7 +413,6 @@ padding-top: 5px;
     }
 
 .als-container {
-
 	position: relative;
 	width: 100%;
 	margin: 0px auto;
