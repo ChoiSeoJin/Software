@@ -637,3 +637,45 @@ background-color: white;
 #demo1 .als-next {
 	right: 200px;
 }
+.ownerpage_menu{
+	width : 15%;
+	height :800px;
+		padding-top: 20px;
+	border-right: 2px solid gray;
+	background-color: #1F2533;
+	color : white;
+}
+.ownerpage_menu span{
+	font-size : 40px;
+	font-weight :bold;
+
+}
+.ownerpage_menu .ownerpage_menu_head{
+	text-align: center;
+	height: 10%;
+}
+.ownerpage_menu .movie_manager, .ownerpage_menu .member_manager{
+	border-bottom: 2px solid gray;
+}
+.movie_manager .movie_manager_head, .member_manager .member_manager_head{
+	height: 20%;
+	font-size : 20px;
+	padding-left: 13px;
+	border-bottom: 2px solid gray;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.movie_manager ul, .member_manager ul{
+	height : 60%;
+	margin-bottom: 0px;
+}
+.movie_manager ul li, .member_manager ul li{
+	height : 30%;
+	border-left: 2px solid gray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.movie_manager ul li span,.member_manager ul li span{
+	font-size: 16px;
+}

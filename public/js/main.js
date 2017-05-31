@@ -43,6 +43,13 @@ $(".bookbtn").click(function(){
 $(".login").click(function() {
     alert("login");
 });
+$(".ownerdiv").click(function(){
+    var nowActive = $(".active");
+    nowActive.removeClass("active");
+    nowActive.addClass("inactive"); 
+    $(".ownerpage").removeClass("inactive");
+    $(".ownerpage").addClass("active");
+});
 
 $(".nowshowingbtn").click(function() {
     var me = $(this);

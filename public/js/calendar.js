@@ -25,17 +25,21 @@ $(function() {
          $('.cal').append("<div class='movable'</div>");  
          $('.month span').text((m+1)+"월");
 
-         for(var j=0;j<10;j++){
+         for(var j=0;j<31;j++,d++){
              console.log(d_tmp);
        
             
-            $('.movable').append("<div class='date_"+j+"'><a href='#' id='date_"+j+"' onClick=date_select("+j+")>"+(d_tmp++)+"</a></div>");   
-            if((d_tmp)==lastDate+1) d_tmp =1;
+            $('.movable').append("<div class='date_"+d_tmp+"'><a class= 'month_"+(m+1)+"' href='#' id='date_"+d_tmp+"' onClick=date_select("+j+","+(m+1)+","+lastDate+")>"+(d_tmp++)+"</a></div>");   
+            if((d_tmp)==lastDate+1){
+                d_tmp =1;
+                lastDate=last[++m];
+            } 
         }
        
 });
-function date_select(j){
-        alert($("#date_"+j).text());
+function date_select(j,m,l){  
+        $('.month span').text((m)+"월");
+     
 }
 $(function(){
 
@@ -51,11 +55,12 @@ $(function(){
 
     function stop() { clearInterval(itv); }
     function anim() {
-      C = ($(this).is(".prev") ? --C : ++C) <0 ? N-1 : C%N;
+      C = ($(this).is(".prev") ? --C : ++C) <0 ? 0 : C%N;
+      
       $movable.css({transform: "translateX(-"+ (C*10) +"%)"});
-
+    
     }
-  
+
     $(".prev, .next").on("click", anim);
     $gal.hover(stop, play);
   });
