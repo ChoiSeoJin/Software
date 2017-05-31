@@ -33,15 +33,15 @@
         }
 
         .modal-dialog.modal-80size {
-          width: 45%;
-          height: 80%;
+          width: 50%;
+          height: 95%;
           margin: 0;
           padding: 0;
         }
 
         .modal-content.modal-80size {
-          height: auto;
-          min-height: 80%;
+          height: 100%;
+          min-height: 100%;
           overflow-x:hidden;
           overflow-y:auto;
         }
