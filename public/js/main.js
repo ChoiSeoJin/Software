@@ -27,15 +27,6 @@ $(".reservationdiv").click(function() {
     $(".reservationpage").addClass("pageactive");
 });
 
-$(".seatlayout").click(function() {
-    var nowActive = $(".pageactive");
-    nowActive.removeClass("pageactive");
-    nowActive.addClass("pageinactive"); 
-    $(".seatlayout").removeClass("pageinactive");
-    $(".seatlayout").addClass("pageactive");
-    
-});
-
 $(".homeicondiv").click(function() {
     var nowActive = $(".pageactive");
     nowActive.removeClass("pageactive");
@@ -118,11 +109,11 @@ $(".signinstr").click(function() {
 
 
 $(".finished").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".mypagediv").removeClass("inactive");
-    $(".mypagediv").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".mypagediv").removeClass("pageinactive");
+    $(".mypagediv").addClass("pageactive");
 });
 
 function onYouTubeIframeAPIReady() {
