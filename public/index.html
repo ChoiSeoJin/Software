@@ -29,12 +29,13 @@
          <div class="theaterdiv">THEATER</div>
          <div class="reservationdiv">RESERVATION</div>
          <div class="storediv">STORE</div>
+         <div class="ownerdiv tempinactive">MANAGEMENT</div>
          <a href="#loginModal" data-toggle="modal"><div class="logindiv">LOGIN</div></a>
-         <div class="logoutdiv">LOGOUT</div>
-         <div class="usernamediv">USER</div>
-         <div class="ownerdiv">관리페이지</div>
+         <div class="logoutdiv tempinactive">LOGOUT</div>
+         <div class="usernamediv"></div>
+         
       </div>
-      <div class="mainpage pageinactive">
+      <div class="mainpage pageactive">
          <div class="home-hero ">
 
             <div id="heroVideoTvScreen" class="home-hero-video-iframe"></div>
@@ -149,7 +150,7 @@
       </div>
       <!--  #################################################HOME PAGE##################################################-->
       <!--########################################### nowplaying div ###########################################-->
-      <div class="nowplayingpage pageactive">
+      <div class="nowplayingpage pageinactive">
          <div class="movieareadiv">
             <div class="list">
                <div class="first">
@@ -488,7 +489,7 @@
 
 
     <!--########################################### reservation div ###########################################-->
-    <div class="reservationpage inactive">
+    <div class="reservationpage pageinactive">
         <div class = 'month'><span>5월</span></div>
         <div class="cal" >
         
@@ -515,7 +516,7 @@
             </div>
     </div>
 
-    <div class="seatlayout inactive">
+    <div class="seatlayout pageinactive">
             <div class="reservation_summary">
                 <div class="movie_info">
                     <div class="movie_img"></div>
@@ -548,7 +549,7 @@
             </div>    
     </div>
 
-    <div class="mypagediv inactive" id="#mypage">
+    <div class="mypagediv pageinactive" id="#mypage">
 
         <div class="mypagecontent">
         <div class="mypageimage"><img src="./img/user.png"></div>
@@ -571,7 +572,7 @@
         <div class="mypage_store_info"></div>
     </div>
 
-    <div class="ownerpage inactive">
+    <div class="ownerpage pageinactive">
         <div class="ownerpage_menu"><div class="ownerpage_menu_head"><span>베드시네마</span></div>
             <div class= "movie_manager">
                 <div class="movie_manager_head">영화관리</div>
@@ -599,12 +600,7 @@
 
         <!--########################################### reservation div ###########################################-->
 
-
-
-        <!--########################################### login div ###########################################-->
-        <div class="loginpage inactive">
-        </div>
-        <!--########################################### login div ###########################################-->
+       
 
         <!-- ###########################################Modal ##############################################-->
         <div class="modal modal-center fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="my80sizeCenterModalLabel" aria-hidden="true">

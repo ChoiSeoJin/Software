@@ -55,6 +55,13 @@ $(".signinbtn").click(function() {
 			success: function(data) {
 				if(data== "NO") {
 					$('#upid').removeClass("validationinactive");
+				} else {
+					$('#inpwd').addClass("validationinactive");
+					$('.fade.in').removeClass("modal-backdrop");
+					$('.modal-center').css("display","");
+					$('.usernamediv').text(signupid);
+					$('.logindiv').addClass("tempinactive");
+					$('.logoutdiv').removeClass("tempinactive");
 				}
 			}
 		});
@@ -77,13 +84,27 @@ $(".signinbtn").click(function() {
 			if(data== "NO") {
 				$('#inpwd').removeClass("validationinactive");
 			} else {
-				$('#inpwd').addClass("validationinactive");
-				$('.fade.in').removeClass("modal-backdrop");
-				$('.modal-center').css("display","");
-				$(".modal-content").addClass("validationinactive");
+				$("#loginModal").removeClass("in");
+				$("#loginModal").attr("aria-hidden","true");
+				$('#loginModal').css("display","");
+				$('#loginModal').css("display","none");
+				$('#loginModal').css("padding-right","");
+				$('body').removeClass('modal-open');
+				$('body').css("padding-right","");
+				$('#loginModal > .modal-backdrop').remove();
+				$('.usernamediv').text(signupid);
+				$('.logindiv').addClass("tempinactive");
+				$('.logoutdiv').removeClass("tempinactive");
+				
 			}
 		}
 	});
 
 });
+
+$('.logoutdiv').click(function() {
+	$('.logoutdiv').addClass("tempinactive");
+	$('.logindiv').removeClass("tempinactive");
+	$('.usernamediv').text("");
+})
 

@@ -27,7 +27,7 @@ span, body, div, img, button {
 	position: static;
 }
 
-.nowplayingdiv:hover, .theaterdiv:hover, .upcomingdiv:hover, .reservationdiv:hover, .logindiv:hover, .storediv:hover {
+.nowplayingdiv:hover, .theaterdiv:hover, .upcomingdiv:hover, .reservationdiv:hover, .logindiv:hover, .storediv:hover , .logoutdiv:hover, .usernamediv:hover, .ownerdiv:hover{
 	color: #4EA385;
 	cursor: Pointer;
 }
@@ -37,10 +37,10 @@ span, body, div, img, button {
 }
 
 
-.homeicondiv , .nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv{
+.homeicondiv , .nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv, .logoutdiv, .ownerdiv{
 	float: left;
 }
-.nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv{
+.nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv, .logoutdiv, .usernamediv, .ownerdiv{
 	font-family: 'Noto Sans', sans-serif;
 	margin-top: 13px;
 	margin-left: 23px;
@@ -380,4 +380,13 @@ span, body, div, img, button {
 
 .validationinactive {
 	display: none;
+}
+
+.tempinactive {
+	display: none;
+}
+
+.usernamediv {
+	float: right;
+	margin-right: 40px;
 }
