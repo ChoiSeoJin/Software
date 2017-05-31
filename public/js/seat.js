@@ -1,27 +1,41 @@
-$('.reservationpage').ready(function(){
-		var arealist=["서울","경기","인천"];
-		var theaterlist =['강남','잠실','노원'];
-		var theaterlist1=['구리','ㅁㄴㅇㄹ','ㅁㄴㅇㄻㄴㅇㄹ'];
-		$('.theater').append("<div class='theater-select'></div>");
-		$('.theater-select').append("<div class='theater-area-list'></div>");
-		$('.theater-select').append("<div class='theater-list'></div>");
-		for(var i=0;i<4;i++){
-			$('.time_table ul').append("<li class='reservation_list_"+i+"''></li>");	
-		}
-		for(var i=0;i<4;i++){
-			$('.reservation_list_'+i).append("<div class='listing-info'><div class='details'><div class='_name'>내이름은칸</div></div></div><div class ='body'></div>");
-			for(var j=0;j<4;j++){
-				$('.reservation_list_'+i+' .body').append("<div><a href='#' id='time_"+j+"'  class ='seatlayoutdiv'>5 : 00</a></div>");
-			}
-		}
-		
-		for(var i=0;i<3;i++){
-			$('.theater-area-list').append("<div><a href='#' class='area_data_"+i+"' onclick=test(theater-list); return false;>"+arealist[i]+"</a></div>");
-		}
-		for(var i = 0 ;i<2;i++)	
-			$('.theater-list').append("<div class='theater-list_"+i+"'>"+theaterlist[i]+"</div>");
+$(".seouldiv").click(function() {
+	var region = $(".theater-list");
+	region.children().remove();
+	$(".theater-list").append("<div>강남</div>");
+	$(".theater-list").append("<div>강변</div>");
+	$(".theater-list").append("<div>영등포</div>");
+	$(".theater-list").append("<div>종로</div>");
+	$(".theater-list").append("<div>노원</div>");
 
 });
+
+$(".gyeongdiv").click(function() {
+	var region = $(".theater-list");
+	region.children().remove();
+	$(".theater-list").append("<div>수원</div>");
+	$(".theater-list").append("<div>안양</div>");
+	$(".theater-list").append("<div>의정부</div>");
+	$(".theater-list").append("<div>구리</div>");	
+});
+
+$(".incheondiv").click(function() {
+	var region = $(".theater-list");
+	region.children().remove();
+	$(".theater-list").append("<div>부평</div>");
+	$(".theater-list").append("<div>계양</div>");
+	$(".theater-list").append("<div>송도</div>");
+	$(".theater-list").append("<div>청라국제도시</div>");
+	$(".theater-list").append("<div>차이나타운</div>");
+});
+
+$(".daegeondiv").click(function() {
+	var region = $(".theater-list");
+	region.children().remove();	
+	$(".theater-list").append("<div>soon</div>");
+});
+    
+
+
 $('number_info').ready(function(){
 		$('.number_info div').each(function(index){
 					var b=$(this).attr('class');

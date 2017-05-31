@@ -20,15 +20,13 @@ $(function() {
 
         var lastDate = last[m];
         var d_tmp = d;
-         console.log(lastDate);
+        
         
          $('.cal').append("<div class='movable'</div>");  
          $('.month span').text((m+1)+"월");
 
          for(var j=0;j<31;j++,d++){
-             console.log(d_tmp);
-       
-            
+                        
             $('.movable').append("<div class='date_"+d_tmp+"'><a class= 'month_"+(m+1)+"' href='#' id='date_"+d_tmp+"' onClick=date_select("+j+","+(m+1)+","+lastDate+")>"+(d_tmp++)+"</a></div>");   
             if((d_tmp)==lastDate+1){
                 d_tmp =1;

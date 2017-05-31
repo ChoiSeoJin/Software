@@ -245,12 +245,11 @@ p{
 }
 .theater-select div{
 	border-bottom : 1px solid #eff1f3;
-   height : 40px;
-   width: 50%;
-   display: inline-block;
-   text-align: center;	
- 	line-height: 40px;
-
+	height : 40px;
+	width: 50%;
+	display: inline-block;
+	text-align: center;	
+	line-height: 40px;
 }
 .time_table{
 	display : inline-block;
@@ -678,3 +677,12 @@ background-color: white;
 .movie_manager ul li span,.member_manager ul li span{
 	font-size: 16px;
 }
+
+.seouldiv:hover, .gyeongdiv:hover, .incheondiv:hover, .daegeondiv:hover {
+	cursor: Pointer
+}
+
+.seouldiv, .gyeongdiv, .incheondiv, .daegeondiv {
+	
+}
+
