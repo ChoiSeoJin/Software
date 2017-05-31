@@ -154,9 +154,9 @@ function onYouTubeIframeAPIReady() {
                 });
               }
 $(".storediv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".storepage").removeClass("inactive");
-    $(".storepage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageinactive");
+    nowActive.addClass("pageinactive"); 
+    $(".storepage").removeClass("pageinactive");
+    $(".storepage").addClass("pageactive");
 });

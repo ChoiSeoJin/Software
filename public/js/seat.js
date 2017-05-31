@@ -6,7 +6,7 @@ $('.reservationpage').ready(function(){
 		$('.theater-select').append("<div class='theater-area-list'></div>");
 		$('.theater-select').append("<div class='theater-list'></div>");
 		for(var i=0;i<4;i++){
-			$('.time_table ul').append("<li class='reservation_list_"+i+"''></li");	
+			$('.time_table ul').append("<li class='reservation_list_"+i+"''></li>");	
 		}
 		for(var i=0;i<4;i++){
 			$('.reservation_list_'+i).append("<div class='listing-info'><div class='details'><div class='_name'>내이름은칸</div></div></div><div class ='body'></div>");
@@ -31,11 +31,11 @@ $('number_info').ready(function(){
 });
 $('.movie_info').ready(function(){
 	$('.body a').click(function(){
-		var nowActive = $(".active");
-  		nowActive.removeClass("active");
-   		nowActive.addClass("inactive"); 
-   		$(".seatlayout").removeClass("inactive");
-   		$(".seatlayout").addClass("active");
+		var nowActive = $(".pageactive");
+  		nowActive.removeClass("pageactive");
+   		nowActive.addClass("pageinactive"); 
+   		$(".seatlayout").removeClass("pageinactive");
+   		$(".seatlayout").addClass("pageactive");
    		$(".seat").addClass("selected_active");
 		var data_id_parent = $(this).parent().parent().parent();
 		var data_id = $(this);
@@ -154,24 +154,42 @@ function NumberCnt(e){
 				}
 			}); 
 		}
+
 function seat_selected(i,j){
 
 	    var obj = document.getElementById("Row_"+i+"_Col_"+j);
 	    var cnt_number = document.getElementsByClassName("cnt Selected")[0].text;
-	    if(cnt_number !=NULL){
-	    	
-	    }
-	    console.log(cnt_number);
+	  	var selected_length=$('.Row_Col_Selected').length;
+	  
+	   	if(selected_length==cnt_number){
+	   		console.log("자리만땅");
+	   	}
+	   	else{
+	   		if(obj.className=='_'){
+	    		$('#'+obj.id).addClass('Row_Col_Selected');
+	    		
+	    	} 
+	   		else
+	   		{
+	   			 $('#'+obj.id).removeClass('Row_Col_Selected');
+	   			 
+	   		}
+	   	}  	
+	    
+ 		
+	    
+	 	console.log($('.Row_Col_Selected').length);
 	   
+	   /*
 	    	if(obj.className=='Row_Col_Selected'){
 	    
-	    		obj.className='.layout .seat_table tr td div';
+	    		$(obj.className='.layout .seat_table tr td div';
 	   			
 			   	}
 		    else{
 		    	obj.className='Row_Col_Selected';
 		    }
-	    
+	    */
 	  
 }
 
@@ -183,7 +201,7 @@ function seatlayout(){
 		$(".seat_table").append("<tr class=Row_"+i+"><td><div class = seatname_'"+seatname[i]+"'><span>"+seatname[i]+"</span></div></td>");
 		$(".Row_" +i).append("<td class = Col_"+i+"></td>");
 		for(var j=1;j<21;j++)
-		$(".Col_" +i).append("<div id = 'Row_"+i+"_Col_"+j+"'><a href='#' class='available' onClick='seat_selected("+i+","+j+")'>"+j+"</a></div>");
+		$(".Col_" +i).append("<div id = 'Row_"+i+"_Col_"+j+"' class='_'><a href='#' class='available' onClick='seat_selected("+i+","+j+")'>"+j+"</a></div>");
 
 		$(".Row_"+i).append("</td>");
 

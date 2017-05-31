@@ -220,15 +220,15 @@ span, body, div, img, button {
 	display: block;
 }
 
-.pageinactive {
+.pageinactive, .inactive{
 	display: none;
 }
 
-.theateractive {
+.theateractive, .active,{
 	display: block;
 }
 
-.theaterinactive {
+.theaterinactive, {
 	display: none;
 }
 
