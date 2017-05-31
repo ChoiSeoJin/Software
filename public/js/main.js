@@ -26,6 +26,7 @@ $(".reservationdiv").click(function() {
     $(".reservationpage").removeClass("pageinactive");
     $(".reservationpage").addClass("pageactive");
 });
+
 $(".seatlayout").click(function() {
     var nowActive = $(".pageactive");
     nowActive.removeClass("pageactive");
@@ -49,6 +50,16 @@ $(".bookbtn").click(function(){
     $(".reservationpage").removeClass("pageinactive");
     $(".reservationpage").addClass("pageactive");
 });
+
+$(".ownerdiv").click(function(){
+    var nowActive = $(".active");
+    nowActive.removeClass("active");
+    nowActive.addClass("inactive"); 
+    $(".ownerpage").removeClass("inactive");
+    $(".ownerpage").addClass("active");
+});
+
+
 $(".nowshowingbtn").click(function() {
     var me = $(this);
     var other = $(".comingsoonbtn");
@@ -66,6 +77,7 @@ $(".comingsoonbtn").click(function() {
     me.removeClass("unclicked");
     me.addClass("clicked");
 });
+
 
 $(".kangnambtn").click(function() {
     var me = $(".kangnamtheater");
@@ -104,6 +116,14 @@ $(".signinstr").click(function() {
 });
 
 
+
+$(".finished").click(function() {
+    var nowActive = $(".active");
+    nowActive.removeClass("active");
+    nowActive.addClass("inactive"); 
+    $(".mypagediv").removeClass("inactive");
+    $(".mypagediv").addClass("active");
+});
 
 function onYouTubeIframeAPIReady() {
                 var player;
