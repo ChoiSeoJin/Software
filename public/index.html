@@ -30,6 +30,8 @@
          <div class="reservationdiv">RESERVATION</div>
          <div class="storediv">STORE</div>
          <a href="#loginModal" data-toggle="modal"><div class="logindiv">LOGIN</div></a>
+         <div class="logoutdiv">LOGOUT</div>
+         <div class="usernamediv">USER</div>
       </div>
       <div class="mainpage pageinactive">
          <div class="home-hero ">
@@ -638,7 +640,7 @@
                </div>
                <div class="junior">
                   <span class="title">청소년</span>
-                  <script><
+                  <script>
                      numberCnt('junior');
                   </script>
                </div>
@@ -796,16 +798,21 @@
 
                     <div class="signinarea signactive">
                         <div class="idinputdiv"><input type="text" class="idinput" placeholder="ENTER YOU EMAIL ID"/></div>
+                        <div class="idvalidiv validationinactive">INVALID ID</div>
                         <div class="passwordinputdiv"><input type="password" class="passwordinput" placeholder="ENTER YOUR PASSWORD"/></div>
+                        <div class="pwdvalidiv validationinactive">WRONG PASSWORD</div>
                         <div class="signinbtnwrap"><div class="signinbtn">SIGN IN</div></div>    
                         <div class="fotgotpassword">FORGOT PASSWORD?</div>
                         <div class="signupstr">Sign Up</div>                    
                     </div>
 
                     <div class="signuparea signinactive">
-                        <div class="idinputdiv"><input type="text" class="idinput" placeholder="ENTER YOU EMAIL ID"/></div>
-                        <div class="passwordinputdiv"><input type="password" class="passwordinput" placeholder="ENTER YOUR PASSWORD"/></div>
-                        <div class="passwordinputdiv"><input type="password" class="passwordinput" placeholder="CONFIRM PASSWORD"/></div>
+                        <div class="idinputdiv"><input type="text" class="idinput" id="signupid" placeholder="ENTER YOU EMAIL ID"/></div>
+                        <div class="idvalidiv validationinactive" id="upid">INVALID EMAIL</div>
+                        <div class="passwordinputdiv"><input type="password" class="passwordinput" id="signuppwd" placeholder="ENTER YOUR PASSWORD"/></div>
+                        <div class="pwdvalidiv validationinactive" id="uppwd">TOO SHORT</div>
+                        <div class="passwordinputdiv"><input type="password" class="passwordinput" id="pwdcfm" placeholder="CONFIRM PASSWORD"/></div>
+                        <div class="cfmvaldiv validationinactive" id="upcfm">NOT SAME</div>
                         <div class="signinbtnwrap"><div class="signinbtn">SIGN UP</div></div>          
                         <div class="fotgotpassword">FORGOT PASSWORD?</div>
                         <div class="signinstr">Sign In</div>              
@@ -818,7 +825,9 @@
             </div>
          </div>
       </div>
+
       <script async src="https://www.youtube.com/iframe_api"></script>
+      <script src="js/validation.js"></script>
       <script src="js/main.js"></script>
       <script src="js/comment.js"></script>
       <script src="js/star.js"></script>

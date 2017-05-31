@@ -377,3 +377,7 @@ span, body, div, img, button {
 .signinactive {
 	display: none;
 }
+
+.validationinactive {
+	display: none;
+}
