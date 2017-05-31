@@ -4,7 +4,7 @@ module.exports = function(app, Member) {
 	app.get('/', function( req, res) {
 		res.render(path.resolve(__dirname + '/../public/index.html'));
 	});
-	app.get('/login/member', function( req, res) {
+	app.post('/login/member', function( req, res) {
 		Member.findOne({id: req.body.id, password: req.body.password}, function(err, member) {
 			if(err) console.log("addmember error");
 			if(member) {

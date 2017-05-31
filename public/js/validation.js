@@ -63,3 +63,27 @@ $(".signinbtn").click(function() {
 });
 
 
+$(".signinbtn").click(function() {
+	var signupid = $("#signinid").val();
+	var signuppwd = $("#signinpwd").val();
+	$.ajax({
+		type:'post',
+		url: '/login/member',
+		data: {
+			id:signupid,
+			password:signuppwd
+		},		
+		success: function(data) {
+			if(data== "NO") {
+				$('#inpwd').removeClass("validationinactive");
+			} else {
+				$('#inpwd').addClass("validationinactive");
+				$('.fade.in').removeClass("modal-backdrop");
+				$('.modal-center').css("display","");
+				$(".modal-content").addClass("validationinactive");
+			}
+		}
+	});
+
+});
+
