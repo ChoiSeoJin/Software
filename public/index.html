@@ -505,9 +505,13 @@
 
     <!--########################################### reservation div ###########################################-->
     <div class="reservationpage inactive">
-        <div class="cal">
-            <div></div>
+        <div class = 'month'><span>5월</span></div>
+        <div class="cal" >
+        
         </div>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+        
         <div class="content">
             <div class="theater">
                 <div class="theater-head">
@@ -525,17 +529,18 @@
                 </ul>
             </div>
             </div>
-        </div>
+    </div>
 
-        <div class="seatlayout inactive">
+    <div class="seatlayout inactive">
             <div class="reservation_summary">
                 <div class="movie_info">
-                    <div class="movie_img">a</div>
+                    <div class="movie_img"></div>
                     <div class="movie_text">
-                        <div class="movie_name">b</div>
-                        <div class="movie_theater">c</div>
-                        <div class="movie_date">d</div>
-                        <div class="movie_theater_number">e</div>
+                        <span>이름 : </span><div class="movie_name"></div>
+                        <span>극장명 : </span><div class="movie_theater"></div>
+                        <span>상영관 : </span><div class="movie_theater_number"></div>
+                        <span>영화 일시 : </span><div class="movie_date"></div>
+                        
                     </div>
                 </div>
                 <div class="number_info">
@@ -546,6 +551,7 @@
                         <span class="title">청소년</span>
                     </div>
                 </div>
+                <div class="finished" ><a href="#"><img src= "./img/card.png"></a></div>
             </div>
 
             <div class="seat">
@@ -555,9 +561,37 @@
                 <div class="layout" id="layout">
                     <script>seatlayout();</script>
                 </div>
-            </div>
-            
+            </div>    
+    </div>
+
+    <div class="mypagediv inactive" id="#mypage">
+
+        <div class="mypagecontent">
+        <div class="mypageimage"><img src="./img/user.png"></div>
+        <div class="user_info">
+            <span>아이디 : </span><div class="user_id"></div>
+            <span>이  름 : </span><div class="user_name"></div>
+            <span>이메일 : </span><div class="user_email"></div>
+            <span>적립금 : </span><div class="user_cash"></div>
         </div>
+        </div>
+        <div class="tap-list">
+            <ul class="mypage_tap">
+                <li class="" id = "mypage_reservation_tap"><a>예매 정보</a></li>
+                <li class="" id = "mypage_store_tap"><a>구매 정보</a></li>
+
+            </ul>
+        </div>
+
+        <div class="mypage_reservation_info"></div>
+        <div class="mypage_store_info"></div>
+            
+
+
+
+
+      
+    </div>
 
         <!--########################################### reservation div ###########################################-->
 

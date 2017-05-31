@@ -19,36 +19,47 @@ $(function() {
             // 현재 월의 마지막 일이 며칠인지 구합니다.
 
         var lastDate = last[m];
+        var d_tmp = d;
          console.log(lastDate);
-         for(var j=0;j<10;j++){
-            $('.cal').append("<div class='date_"+j+"'>"+(d+j)+"</div>");   
-        }
-    
-        /*for(var i=0;i<12;i++){
-            for(var j=d;j<=lastDate;j++){
-    //            <div class="als-wrapper">
-     //               <div class="als-item"><div class="cal"></div>orange</div>
-    
-                $('.als-wrapper').append("<div class='als-item'><div>"+j+"</div></div>");   
-                    if(j==lastDate){
-                        lastDate=last[++m];
-                          console.log(lastDate);
-                        d=1;
-                        break;
-                    } 
-            }
-        }/*
-        for(var i=0;i<7;i++){
-             for(var j=0;j<=12;j++){
-            if(d+j>lastDate){
-                d=1;
+        
+         $('.cal').append("<div class='movable'</div>");  
+         $('.month span').text((m+1)+"월");
 
-                break;
-            }
-            $('.cal').append("<div class='date_"+j+"'>"+(d+j)+"</div>");
-         }
-          $('.date_'+i).append("<br><span>"+ko_theDay[theDay+i]+"<span>");
-        }*/     
+         for(var j=0;j<10;j++){
+             console.log(d_tmp);
+       
+            
+            $('.movable').append("<div class='date_"+j+"'><a href='#' id='date_"+j+"' onClick=date_select("+j+")>"+(d_tmp++)+"</a></div>");   
+            if((d_tmp)==lastDate+1) d_tmp =1;
+        }
+       
+});
+function date_select(j){
+        alert($("#date_"+j).text());
+}
+$(function(){
+
+  $('.cal').each(function() {
+
+    var $gal     = $(this),
+        $movable = $(".movable", $gal), 
+        $slides  = $(">*", $movable),
+        N        = $slides.length,
+        C        = 0,
+        itv      = null;
+    
+
+    function stop() { clearInterval(itv); }
+    function anim() {
+      C = ($(this).is(".prev") ? --C : ++C) <0 ? N-1 : C%N;
+      $movable.css({transform: "translateX(-"+ (C*10) +"%)"});
+
+    }
+  
+    $(".prev, .next").on("click", anim);
+    $gal.hover(stop, play);
+  });
+
 });
 function calendar1(){
     var div= document.getElementsByClassName("date");

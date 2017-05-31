@@ -28,7 +28,7 @@ ul{
 	height : 332px;
 
 }
-.cnt_Selected{
+.Selected{
 	background-color: black;
 	
 }
@@ -41,27 +41,38 @@ ul{
 }
 .movie_info .movie_text{
 	margin-left: 20px;
+
 	display: inline-block;
 	width: 60%;
+	color: white;
+
+}
+
+.movie_text span{
+	margin-top: 10px;
+	padding-right:10px;
+	float : left;
+	display: block;
+	width: 30%;	
 }
 
 .movie_text div{
-	
+	display: inline-block;
 	margin-top: 10px;
-	width: 100%;
+	width: 70%;
 	padding-left:10px;
 }
 .movie_name{
-	background-color: yellow;
+	
 }
 .movie_theater{
-	background-color: blue;
+	
 }
 .movie_date{
-	background-color: black;
+	
 }
 .movie_theater_number{
-	background-color: white;
+	
 }
 .reservationpage{
 	width:1000px;
@@ -93,9 +104,31 @@ ul{
 	
 	height: 130px;
 	display: block;
-	left:50%;
+	left:45%;
 	position: absolute;
 	padding : 20px 0 0 15px ;
+	float: left;
+}
+.reservation_summary .finished{
+	display: inline-block;
+	width : 15%;
+	height: 100%;
+	float: right;
+	background-color: #c02c3a;
+	border-radius : 15px;
+	padding : 10px 13PX;
+
+}
+.reservation_summary .finished a{
+	/*border :  2px solid #d6d3ce;*/
+	border-radius : 15px;	
+	width: 100%;
+	height: 100%;
+	padding-left: 5px;
+	padding-top: 3px;
+	display: inline-block;
+	
+
 }
 .reservation_summary .number_info .senior{
 	height: 50px;
@@ -126,6 +159,7 @@ ul{
 	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
+	text-decoration: none;
 }
 .reservation_summary .number_info span{
  		float : left;
@@ -179,11 +213,23 @@ p{
 	width : 50%;
 	height : 332px;
 }
+.theater-select .theater-list{
+	position : relative;
+	float : left;
+	 border-right : 1px solid #d4d3c9;
+	width : 50%;
+	height : 332px;
+	 display:block;
+}
+.theater-select .theater-list div{
+	width: 100%;
+}
+
 .theater-select .theater-area-list div{
 
    border-bottom : 1px solid #eff1f3;
    height : 40px;
-
+	width:100%;
    text-align: center;	
  	line-height: 40px;
 
@@ -196,11 +242,13 @@ p{
 	width:100%;
 	position : relative;
 	font-family: NanumGothic;
+	text-decoration: none;
 }
-.theater-select .theater-list{
+.theater-select div{
 	border-bottom : 1px solid #eff1f3;
    height : 40px;
-
+   width: 50%;
+   display: inline-block;
    text-align: center;	
  	line-height: 40px;
 
@@ -225,7 +273,7 @@ p{
 	width :90%;
 	zoom : 1;
 	border-bottom : 1px solid #eff1f3;
-	padding :13px 0 13px 60px;
+	padding :13px 0 13px 13px;
 	
 
 }
@@ -277,7 +325,7 @@ p{
 	position : relative;
 	width:50px;
 	line-height: 30px;
-
+	background-color: white;
 	margin-left: 5px;
 	margin-bottom :12px;
 	text-align: center;
@@ -292,25 +340,49 @@ p{
 	width:100%;
 	position : relative;
 	font-family: Montserrat,sans-serif;
-
+	font-weight: bold;
+	text-decoration: none;
 }
 .cal{
-	width:300px;
+	width:350px;
 	height: 50px;
+	 float: left;
 	overflow: hidden;
+	position: relative;
 
 }
-.cal >div{
+.month{
+	float: left;
+	width:  50px;
+	height: 50px;
 	
-	background-color : #49ba8e;
+	padding: 5px;
+}
+.month span{
+
+	font-size: 24px;
+	font-weight: bold;
+	width:  100%;
+	height: 100%;
+}
+.cal .movable{
+	display: flex;
+  	width: 1000%;
+  	height: 50px;
+ 	transition: transform 0.4s;
+}
+
+.cal .movable div{
+	
+  	background-color : #49ba8e;
 	border-radius : 15px;
 	width:50px;
 	height: 50px;
 	text-align: center;
-	float : left;
-	font-weight: 400px;
-	display: inline-block;
-
+	padding-top: 12px;
+}
+.prev, .next{
+	height: 50px;
 }
 .layout .seat_table tr td div{
 	float :left;
@@ -357,7 +429,7 @@ padding-top: 5px;
 }
 .seat{
 		margin-top: 4%;
-		height: 1000px;
+		height: 700px;
 
 }
 .Row_Col_Selected{
@@ -379,6 +451,102 @@ padding-top: 5px;
 	display: inline-block;
 	zoom :1;
 
+}
+
+.mypagediv{
+
+}
+.mypagecontent{
+	/*background-image: url("/img/screen.png");*/
+	display: inline-block;
+	width : 100%;
+	height: 200px;
+	background-color: #1F2533;
+	padding-left: 10%;
+	padding-top: 20px;
+}
+.mypagecontent .mypageimage{
+	left:10%;
+	width : 200px;
+	float: left;
+}
+.user_info{
+	display: inline-block;
+	width : 300px;
+}
+.user_info div{
+	color: white;
+	display: inline-block;
+	width :70%;
+	margin-top: 5%;
+}
+.user_info span{
+	color: white;
+	width :30%;
+	float: left;
+	margin-top: 5%;
+}
+._active{
+	box-shadow:	inset 0 -3px 0 #49ba8e;
+}
+.tap-list{
+	zoom :1;
+	position: relative;
+	border-bottom : 1px solid #dfe3e7;
+	padding : 0 20px;
+	list-style: none;
+	margin:0;
+    padding:0;
+}
+.mypage_tap{
+	padding : 15px 15px 0;
+	margin-bottom: 0;
+}
+.tap-list li{
+	display: inline-block;
+	padding :15px 10px;
+}
+.mypage_reservation_info{
+	height: 250px;
+
+	padding-left: 10%;
+	padding-top: 20px;
+}
+.mypage_store_info{
+	height: 100%;
+	background-color: yellow;
+	padding-left: 10%;
+	padding-top: 20px;
+}
+.selected_active{
+opacity: 0.4;
+background-color: white;
+  
+}
+.mypage_reservation_info li{
+	display : inline-block;
+	zoom : 1;
+	border-bottom : 1px solid #eff1f3;
+
+	width: 100%;
+	height: 100%;
+}
+.mypage_reservation_info li #imagediv{
+	width: 20%;
+	float: left;
+}
+.mypage_reservation_info li #movie_info{
+	width: 80%;
+	height: 180px;
+	display: inline-block;
+}
+.mypage_reservation_info li #movie_info span{
+	float: left;
+	padding-top: 20px;
+}
+.mypage_reservation_info li #movie_info div{
+	width : 70%;
+	padding-top: 20px;
 }
 .slider {
         width: 50%;
