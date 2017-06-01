@@ -3,7 +3,8 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-$(".signinbtn").click(function() {
+$(".signupbtn").click(function() {
+	
 	var signupid = $("#signupid").val();
 	var signuppwd = $("#signuppwd").val();
 	var pwdcfm = $("#pwdcfm").val();
@@ -62,6 +63,13 @@ $(".signinbtn").click(function() {
 					$('.usernamediv').text(signupid);
 					$('.logindiv').addClass("tempinactive");
 					$('.logoutdiv').removeClass("tempinactive");
+					$('#signupid').val("");
+					$('#signuppwd').val("");
+					$('#pwdcfm').val("");
+					$('#inpwd').addClass("validationinactive");
+					$('#upid').addClass("validationinactive");
+					$('#uppwd').addClass("validationinactive");
+					$('#upcfm').addClass("validationinactive");	
 				}
 			}
 		});
@@ -71,6 +79,8 @@ $(".signinbtn").click(function() {
 
 
 $(".signinbtn").click(function() {
+	
+
 	var signupid = $("#signinid").val();
 	var signuppwd = $("#signinpwd").val();
 	$.ajax({
@@ -100,6 +110,12 @@ $(".signinbtn").click(function() {
 				}				
 				$('.logindiv').addClass("tempinactive");
 				$('.logoutdiv').removeClass("tempinactive");
+				$('#signinid').val("");
+				$('#signinpwd').val("");
+				$('#inpwd').addClass("validationinactive");
+				$('#upid').addClass("validationinactive");
+				$('#uppwd').addClass("validationinactive");
+				$('#upcfm').addClass("validationinactive");	
 				
 			}
 		}
@@ -114,3 +130,25 @@ $('.logoutdiv').click(function() {
 	$('.usernamediv').text("");
 })
 
+$('#signexit').click(function() {
+	$('#signinid').val("");
+	$('#signinpwd').val("");
+	$('#signupid').val("");
+	$('#signuppwd').val("");
+	$('#pwdcfm').val("");
+	$('#inpwd').addClass("validationinactive");
+	$('#upid').addClass("validationinactive");
+	$('#uppwd').addClass("validationinactive");
+	$('#upcfm').addClass("validationinactive");	
+});
+
+$('.signinstr').click(function() {
+	$("#signupid").val("");
+	$("#signuppwd").val("");
+	$("#pwdcfm").val("");
+});
+
+$('.signupstr').click(function() {
+	$("#signinid").val("");
+	$("#signinpwd").val("");
+});

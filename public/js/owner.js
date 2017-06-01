@@ -33,3 +33,21 @@ $(".movie_add").click(function() {
 			});
 });
 
+$("#movieListBtn").click(function() {
+	$("#movielistcontent").css("display","inline-block");
+	$("#movieaddcontent").css("display","none");
+	$("#memberlistdiv").css("display","none");
+});
+
+$("#movieAddBtn").click(function() {
+	$("#movielistcontent").css("display","none");
+	$("#movieaddcontent").css("display","inline-block");
+	$("#memberlistdiv").css("display","none");
+});
+
+$("#memberListBtn").click(function() {
+	$("#movielistcontent").css("display","none");
+	$("#movieaddcontent").css("display","none");
+	$("#memberlistdiv").css("display","inline-block");
+});
+

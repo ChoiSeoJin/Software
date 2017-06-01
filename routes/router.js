@@ -59,5 +59,19 @@ module.exports = function(app, Member,Movie) {
 
 				res.end("OK");
 			});
+	app.get('/get/member', function(req, res) {
+		Member.find(function(err, members) {
+			if(err) console.log("addmember error");
+			if(!members) {
+				console.log("NO MEMBER");
+				res.end("NO");
+			} else {
+				res.json(members);
+			}
+
+		});
+
+		
+	});
 		
 }

@@ -21,6 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/cmsbackup.css" rel="stylesheet">
+    <link href="css/owner.css" rel="stylesheet">
 </head>
 
 <body>
@@ -883,21 +884,19 @@
             <div class="movie_manager">
                 <div class="movie_manager_head">영화관리</div>
                 <ul>
-                    <li><span>영화 추가</span></li>
-                    <li><span>영화 삭제</span></li>
-                    <li><span>영화 수정</span></li>
+                    <li><span id="movieListBtn">영화 리스트</span></li>
+                    <li><span id="movieAddBtn">영화 추가</span></li>
                 </ul>
             </div>
             <div class="member_manager">
                 <div class="member_manager_head">회원관리</div>
                 <ul>
 
-                    <li><span>회원 삭제</span></li>
-                    <li><span>회원 수정</span></li>
+                    <li><span id="memberListBtn">회원 리스트</span></li>
                 </ul>
             </div>
         </div>
-        <div class="ownerpage_content">
+        <div class="ownerpage_content" id="movielistcontent">
         <div class="ownerpage_content_head"><span>MOVIE LIST</span></div>
         <div class="movielistdiv">
             <table class="ownerpage_movie">
@@ -950,6 +949,10 @@
                     <td class="td_btn"><button class="delete">삭제</button></td>
                 </tr>
             </table>
+        </div>
+        </div>
+
+        <div class="ownerpage_content" id="movieaddcontent">        
             <div class="ownerpage_content_head">
                 <span>MOVIE ADD</span>
             </div>
@@ -1032,9 +1035,11 @@
                 </tr>
             </table>
         </div>
+        <div class="" id="memberlistdiv">
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        </div>
     </div>
-    </div>
-
+    
     <!--########################################### Store div ###########################################-->
     <div class="storepage pageinactive">
 
@@ -1297,7 +1302,7 @@
         <div class="modal-dialog modal-lowsize modal-center" role="document">
             <div class="modal-content modal-80size" id="well">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" id="signexit">×</span></button>
                     <div class="modal-title" id="myModalLabel">
                         <div class="signindiv">SIGN IN</div>
                     </div>
