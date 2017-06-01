@@ -47,15 +47,19 @@ module.exports = function(app, Member, Movie) {
     app.post('/movie/addmovie', function(req, res) {
         console.log("asdmfo");
         var movie = new Movie();
-        movie.name = req.body.name;
-        movie.director = req.body.director;
-        movie.genre = req.body.genre;
-        movie.opendate = req.body.opendate;
-        movie.age = req.body.age;
-        movie.posterURL = req.body.posterURL;
-        movie.videoURL = req.body.videoURL;
-        movie.steelcutURL = req.body.steelcutURL;
-        movie.story = req.body.story;
+
+        movie.name: req.body.name;
+        movie.subtitle : req.body.subtitle;
+        movie.director: req.body.director;
+        movie.actor : req.body.actor;
+        movie.genre : req.body.genre;
+        movie.opendate : req.body.opendate;
+        movie.age : req.body.age;
+        movie.count: req.body.count;
+        movie.star: req.body.star;
+        movie.posterurl : req.body.posturl;
+        movie.story : req.body.story;
+        movie.steelcuturl : req.body.steelcuturl;
         movie.save(function(err) {
             if (err) console.log("movie save err");
         });

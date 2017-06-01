@@ -1,32 +1,33 @@
 $(".movie_add").click(function() {
     var m_name = $('#m_name').val();
+    var m_subtitle = $('#m_subtitle').val();
     var m_director = $('#m_director').val();
     var m_actor = $('#m_actor').val();
     var m_genre = $('#m_genre').val();
     var m_opendate = $('#m_opendate').val();
     var m_age = $('#m_age').val();
-    var m_posterURL = $('#m_posterURL').val();
-    var m_videoURL = $('#m_videoURL').val();
-    var m_steelcutURL = $('#m_steelcutURL').val();
+    var m_count = $('#m_count').val();
     var m_star = $('#m_star').val();
+    var m_posturl = $('#m_posturl').val();
     var m_story = $('#m_story').val();
-    var m_type = $('#m_type').val();
+    var m_steelcuturl = $('#m_steelcuturl').val();
 
     $.ajax({
         type: 'post',
         url: '/movie/addmovie',
         data: {
             name: m_name,
+            subtitle : m_subtitle,
             director: m_director,
-            actor: m_actor,
-            genre: m_genre,
-            opendate: m_opendate,
-            age: m_age,
-            posterURL: m_posterURL,
-            videoURL: m_videoURL,
-            steelcutURL: m_steelcutURL,
-            star:m_star,
-            story: m_story
+            actor : m_actor,
+            genre : m_genre,
+            opendate : m_opendate,
+            age : m_age,
+            count: m_count,
+            star: m_star,
+            posterURL : m_posturl,
+            story : m_story,
+            steelcutURL : m_steelcuturl
         },
 
         success: function(data) {
@@ -35,17 +36,17 @@ $(".movie_add").click(function() {
     });
 
     $('#m_name').val("");
+    $('#m_subtitle').val("");
     $('#m_director').val("");
     $('#m_actor').val("");
     $('#m_genre').val("");
     $('#m_opendate').val("");
     $('#m_age').val("");
-    $('#m_posterURL').val("");
-    $('#m_videoURL').val("");
-    $('#m_steelcutURL').val("");
-    $('#m_story').val("");
-    $('#m_type').val("");
+    $('#m_count').val("");
     $('#m_star').val("");
+    $('#m_posturl').val("");
+    $('#m_story').val("");
+    $('#m_steelcuturl').val("");
 
 
 });

@@ -11,9 +11,9 @@ var movieSchema = new Schema({
     age :String,
     count:String,
     star:String,
-    posterURL :String,
+    posterurl :String,
     story :String,
-    steelcutURL :String
+    steelcuturl :String
 });
 
 module.exports = mongoose.model('movies', movieSchema);
