@@ -52,24 +52,45 @@ $('.movie_info').ready(function(){
    		$(".seatlayout").removeClass("pageinactive");
 
    		$(".seatlayout").addClass("pageactive");
+   		$(".seatlayout").addClass("_");
    		$(".seat").addClass("selected_active");
+   		$("._").removeClass("Row_Col_Selected");
+   		
    		$(".cnt").removeClass("Selected");
 		$('.cnt').css('color',"#333");
    		
-		var data_id_parent = $(this).parent().parent().parent();
+		var data_id_parent = $(this).parent().parent().parent().parent();
+		var theater_number=$(this).parent().parent().parent().find('._name').text();
 		var data_id = $(this);
-
-		var n = $(data_id_parent).find('._name').text();
-	
+		var time= $(this).text();
+		var name = $(data_id_parent).find('.name_m').text();
 		var t = $(data_id).text();
+
+		$.getJSON("/movie/movielist", function(data) {
+			var a = name.replace(/(\s*)/g,"");
+			console.log(a);
+			for(var i =0;i<data.length;i++){
+				
+				if((data[i].name)==a)
+				{
+					$(".movie_name").text(a);
+					$(".movie_img img").attr('src',data[i].posterurl);
+				} 
+			}
+
+				
+		});
+		
+	
 		//var t = $(data_id_parent).find('._name').text();
 		//var t = $(data_id_parent).find('._name').text();
 		//var movie_name = $('.reservation_list_'+i+ ' div div ._name').text();
-		$(".movie_img").text("사진");
-		$(".movie_name").text(n);
-		$(".movie_theater").text(t);
-		$(".movie_date").text(t);
-		$(".movie_theater_number").text(t);
+		
+		//$(".movie_name").text(name);		
+		
+		$(".movie_theater").text("강남");
+		$(".movie_date").text(time);
+		$(".movie_theater_number").text(theater_number);
 		 
 		});
 });
@@ -115,19 +136,22 @@ $('.mypagediv').ready(function(){
 });
 $('.mypage_reservation_info').ready(function(){
 	$('.finished').click(function(){
-		for(var i=0;i<5;i++){
+		console.log($('.Selected').text());
+		for(var i=0;i<$('.Selected').text();i++){
 			$(".mypage_reservation_info").append("<li class = 'mypage_reservation_info_"+i+"'></li>");
-			$(".mypage_reservation_info_"+i).append("<div class='movie_"+i+"' id = 'imagediv'><img src='img/kan.png' style : width='150px' height='180px'></div>");
+			$(".mypage_reservation_info_"+i).append("<div class='movie_"+i+"' id = 'imagediv'><img src='' style : width='150px' height='180px'></div>");
 			$(".mypage_reservation_info_"+i).append("<div class = 'mypage_movie_info_"+i+"' id='movie_info'></div>");
 			$(".mypage_movie_info_"+i).append("<span>이 름:</span><div class='reservation_movie_name_"+i+"'></div>");
 			$(".mypage_movie_info_"+i).append("<span>상영관:</span><div class='reservation_movie_theater_"+i+"'></div>");	
 			$(".mypage_movie_info_"+i).append("<span>일시:</span><div class='reservation_movie_date_"+i+"'></div>");
 			$(".mypage_movie_info_"+i).append("<span>상영관번호:</span><div class='reservation_movie_theatere_number_"+i+"'></div>");
-			$(".reservation_movie_name_"+i).text($(".movie_name").text());
+			$(".reservation_movie_name_"+i).text($(".movie_text .movie_name").text());
 			$(".reservation_movie_theater_"+i).text($(".movie_theater").text());
 			$(".reservation_movie_date_"+i).text($(".movie_date").text());
 			$(".reservation_movie_theatere_number_"+i).text($(".movie_theater_number").text());
+			$($('#imagediv img')).attr('src',$(".movie_img img").attr('src'));
 		}
+
 	});
 });
 

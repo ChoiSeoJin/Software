@@ -49,6 +49,7 @@ module.exports = function(app, Member, Movie) {
         var movie = new Movie();
 
 
+
         movie.name = req.body.name;
         movie.subtitle = req.body.subtitle;
         movie.director = req.body.director;
