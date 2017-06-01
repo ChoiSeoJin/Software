@@ -107,6 +107,7 @@ span, body, div, img, button {
 	font-size: 20px;	
 	padding: 20px;	
 	color: #999999;	
+
 }
 
 .clicked:hover, .unclicked:hover {
@@ -229,8 +230,8 @@ span, body, div, img, button {
 }
 
 .movieTitle {
-	padding-left: 50px;
-	font-size: 20px;
+	padding-left: 30px;
+	font-size: 13px;
 	margin-bottom: 5px;
 	
 }

@@ -51,6 +51,8 @@ $(".nowshowingbtn").click(function() {
     other.addClass("unclicked");
     me.removeClass("unclicked");
     me.addClass("clicked");
+    $('.list_m_1_1').addClass('tempinactive');
+    $('.list_m_1').removeClass('tempinactive');
 });
 
 $(".comingsoonbtn").click(function() {
@@ -60,6 +62,8 @@ $(".comingsoonbtn").click(function() {
     other.addClass("unclicked");
     me.removeClass("unclicked");
     me.addClass("clicked");
+    $('.list_m_1').addClass('tempinactive');
+    $('.list_m_1_1').removeClass('tempinactive');
 });
 
 $(".kangnambtn").click(function() {
