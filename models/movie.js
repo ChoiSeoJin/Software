@@ -14,5 +14,4 @@ var movieSchema = new Schema({
     story :String
 });
 
-module.exports = mongoose.model('movie', movieSchema);
-
+module.exports = mongoose.model('movies', movieSchema);

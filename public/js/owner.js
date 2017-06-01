@@ -32,7 +32,6 @@ $(".movie_add").click(function() {
 				}
 			});
 });
-
 $("#movieListBtn").click(function() {
 	$("#movielistcontent").css("display","inline-block");
 	$("#movieaddcontent").css("display","none");
@@ -50,4 +49,3 @@ $("#memberListBtn").click(function() {
 	$("#movieaddcontent").css("display","none");
 	$("#memberlistdiv").css("display","inline-block");
 });
-

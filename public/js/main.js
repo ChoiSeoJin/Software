@@ -48,8 +48,30 @@ $(".ownerdiv").click(function(){
     nowActive.addClass("pageinactive"); 
     $(".ownerpage").removeClass("pageinactive");
     $(".ownerpage").addClass("pageactive");
-});
+    $.getJSON("/movie/movielist", function( data ) {
+            for(var i=0;i<5;i++){
+                $(".ownerpage_movie").append("<tr class='movielist_content_"+i+"'></tr>");
+                $(".movielist_content_"+i).append("<td><div class='movie_name_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_director_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_actor_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_genre_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_opendate_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_story_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_age_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td class='td_btn'><button class='modify'>수정</button></td>");
+                $(".movielist_content_"+i).append("<td class='td_btn'><button class='delete'>삭제</button></td>");
 
+                $(".movie_name_"+i).text(data[i].name);
+                $(".movie_director_"+i).text(data[i].director);
+                $(".movie_actor_"+i).text(data[i].actor);
+                $(".movie_genre_"+i).text(data[i].genre);
+                $(".movie_opendate_"+i).text(data[i].opendate);
+                $(".movie_story_"+i).text(data[i].story);
+                $(".movie_age_"+i).text(data[i].age);
+
+            }
+        });
+});
 
 $(".nowshowingbtn").click(function() {
     var me = $(this);

@@ -4,7 +4,6 @@ function validateEmail(email) {
 }
 
 $(".signupbtn").click(function() {
-	
 	var signupid = $("#signupid").val();
 	var signuppwd = $("#signuppwd").val();
 	var pwdcfm = $("#pwdcfm").val();
@@ -79,8 +78,6 @@ $(".signupbtn").click(function() {
 
 
 $(".signinbtn").click(function() {
-	
-
 	var signupid = $("#signinid").val();
 	var signuppwd = $("#signinpwd").val();
 	$.ajax({
@@ -115,8 +112,7 @@ $(".signinbtn").click(function() {
 				$('#inpwd').addClass("validationinactive");
 				$('#upid').addClass("validationinactive");
 				$('#uppwd').addClass("validationinactive");
-				$('#upcfm').addClass("validationinactive");	
-				
+				$('#upcfm').addClass("validationinactive");					
 			}
 		}
 	});
