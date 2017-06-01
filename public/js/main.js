@@ -1,48 +1,47 @@
 $(".nowplayingdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".nowplayingpage").removeClass("inactive");
-    $(".nowplayingpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".nowplayingpage").removeClass("pageinactive");
+    $(".nowplayingpage").addClass("pageactive");
 });
 $(".upcomingdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".upcomingpage").removeClass("inactive");
-    $(".upcomingpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".upcomingpage").removeClass("pageinactive");
+    $(".upcomingpage").addClass("pageactive");
 });
 $(".theaterdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".theaterpage").removeClass("inactive");
-    $(".theaterpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".theaterpage").removeClass("pageinactive");
+    $(".theaterpage").addClass("pageactive");
 });
 $(".reservationdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".reservationpage").removeClass("inactive");
-    $(".reservationpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".reservationpage").removeClass("pageinactive");
+    $(".reservationpage").addClass("pageactive");
 });
+
 $(".homeicondiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".mainpage").removeClass("inactive");
-    $(".mainpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".mainpage").removeClass("pageinactive");
+    $(".mainpage").addClass("pageactive");
 });
 $(".bookbtn").click(function(){
-   var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".reservationpage").removeClass("inactive");
-    $(".reservationpage").addClass("active");
+   var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".reservationpage").removeClass("pageinactive");
+    $(".reservationpage").addClass("pageactive");
 });
-$(".login").click(function() {
-    alert("login");
-});
+
 $(".ownerdiv").click(function(){
     var nowActive = $(".active");
     nowActive.removeClass("active");
@@ -50,6 +49,7 @@ $(".ownerdiv").click(function(){
     $(".ownerpage").removeClass("inactive");
     $(".ownerpage").addClass("active");
 });
+
 
 $(".nowshowingbtn").click(function() {
     var me = $(this);
@@ -68,12 +68,52 @@ $(".comingsoonbtn").click(function() {
     me.removeClass("unclicked");
     me.addClass("clicked");
 });
+
+
+$(".kangnambtn").click(function() {
+    var me = $(".kangnamtheater");
+    var other = $(".kuritheater");
+    other.removeClass("theateractive");
+    other.addClass("theaterinactive");
+    me.removeClass("theaterinactive");
+    me.addClass("theateractive");
+});
+
+$(".kuribtn").click(function() {
+    var me = $(".kuritheater");
+    var other = $(".kangnamtheater");
+    other.removeClass("theateractive");
+    other.addClass("theaterinactive");
+    me.removeClass("theaterinactive");
+    me.addClass("theateractive");
+});
+
+$(".signupstr").click(function() {
+    var me = $(".signinarea");
+    var other = $(".signuparea");
+    me.removeClass("signactive");
+    me.addClass("signinactive");
+    other.removeClass("signinactive");
+    other.addClass("signactive");
+});
+
+$(".signinstr").click(function() {
+    var me = $(".signuparea");
+    var other = $(".signinarea");
+    me.removeClass("signactive");
+    me.addClass("signinactive");
+    other.removeClass("signinactive");
+    other.addClass("signactive");
+});
+
+
+
 $(".finished").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".mypagediv").removeClass("inactive");
-    $(".mypagediv").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".mypagediv").removeClass("pageinactive");
+    $(".mypagediv").addClass("pageactive");
 });
 
 function onYouTubeIframeAPIReady() {
@@ -104,4 +144,10 @@ function onYouTubeIframeAPIReady() {
                     (player.getPlayerState() === 1) ? player.pauseVideo() : player.playVideo();
                 });
               }
-
+$(".storediv").click(function() {
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageinactive");
+    nowActive.addClass("pageinactive"); 
+    $(".storepage").removeClass("pageinactive");
+    $(".storepage").addClass("pageactive");
+});
