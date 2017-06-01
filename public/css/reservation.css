@@ -243,14 +243,7 @@ p{
 	font-family: NanumGothic;
 	text-decoration: none;
 }
-.theater-select div{
-	border-bottom : 1px solid #eff1f3;
-	height : 40px;
-	width: 50%;
-	display: inline-block;
-	text-align: center;	
-	line-height: 40px;
-}
+
 .time_table{
 	display : inline-block;
 	width:80%;
@@ -686,3 +679,11 @@ background-color: white;
 	
 }
 
+.theater-select div{
+	border-bottom : 1px solid #eff1f3;
+	height : 40px;
+	width: 50%;
+	display: inline-block;
+	text-align: center;	
+	line-height: 40px;
+}
