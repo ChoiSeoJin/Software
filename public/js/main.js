@@ -72,19 +72,17 @@ $(".comingsoonbtn").click(function() {
 $(".kangnambtn").click(function() {
     var me = $(".kangnamtheater");
     var other = $(".kuritheater");
-    other.removeClass("active");
-    other.addClass("inactive");
-    me.removeClass("inactive");
-    me.addClass("active");
+
+    me.removeClass("theaterinactive");
+    other.addClass("theaterinactive");
+    
 });
 
 $(".kuribtn").click(function() {
     var me = $(".kuritheater");
     var other = $(".kangnamtheater");
-    other.removeClass("active");
-    other.addClass("inactive");
-    me.removeClass("inactive");
-    me.addClass("active");
+    me.removeClass("theaterinactive");
+    other.addClass("theaterinactive");
 });
 
 

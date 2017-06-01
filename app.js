@@ -11,7 +11,7 @@ db.once('open', function(){
     console.log("Connected to mongod server");
 });
 
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://223.194.44.71/test');
 
 var Member = require('./models/member');
 var Movie=require('./models/movie');

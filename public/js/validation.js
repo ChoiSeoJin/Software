@@ -92,7 +92,12 @@ $(".signinbtn").click(function() {
 				$('body').removeClass('modal-open');
 				$('body').css("padding-right","");
 				$('#loginModal > .modal-backdrop').remove();
-				$('.usernamediv').text(signupid);
+				if(data == "ADMIN") {
+					$('.usernamediv').text("ADMIN");
+					$('.ownerdiv').removeClass("tempinactive");
+				} else {
+					$('.usernamediv').text(signupid);
+				}				
 				$('.logindiv').addClass("tempinactive");
 				$('.logoutdiv').removeClass("tempinactive");
 				
@@ -105,6 +110,7 @@ $(".signinbtn").click(function() {
 $('.logoutdiv').click(function() {
 	$('.logoutdiv').addClass("tempinactive");
 	$('.logindiv').removeClass("tempinactive");
+	$('.ownerdiv').addClass("tempinactive");
 	$('.usernamediv').text("");
 })
 

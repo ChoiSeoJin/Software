@@ -256,14 +256,6 @@ span, body, div, img, button {
 	display: none;
 }
 
-.theateractive, .active,{
-	display: block;
-}
-
-.theaterinactive, {
-	display: none;
-}
-
 .seatactive {
 	display: block;
 }
@@ -518,4 +510,9 @@ span, body, div, img, button {
 .usernamediv {
 	float: right;
 	margin-right: 40px;
+}
+
+
+.theaterinactive {
+	display:none;
 }

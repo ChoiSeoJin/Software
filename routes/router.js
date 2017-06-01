@@ -7,8 +7,15 @@ module.exports = function(app, Member,Movie) {
 	app.post('/login/member', function( req, res) {
 		Member.findOne({id: req.body.id, password: req.body.password}, function(err, member) {
 			if(err) console.log("addmember error");
+
 			if(member) {
-				res.end("OK");
+				console.log(member.auth);
+				if(member.auth == "1") {
+					res.end("ADMIN");
+				} else {
+					res.end("OK");	
+				}
+				
 			} else {
 				res.end("NO");
 			}
@@ -21,6 +28,7 @@ module.exports = function(app, Member,Movie) {
 				var member = new Member();
 				member.id = req.body.id;
 				member.password = req.body.password;
+				member.auth = "0";
 
 				member.save(function(err) {
 					if(err) console.log("member save err");
