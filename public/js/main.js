@@ -48,7 +48,67 @@ $(".ownerdiv").click(function(){
     nowActive.addClass("pageinactive"); 
     $(".ownerpage").removeClass("pageinactive");
     $(".ownerpage").addClass("pageactive");
+    alert("adsfjkajflkasjflk");
+    $.getJSON("/movie/movielist", function( data ) {
+            for(var i=0;i<5;i++){
+                $(".ownerpage_movie").append("<tr class='movielist_content_"+i+"'></tr>");
+                $(".movielist_content_"+i).append("<td><div class='movie_name_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_director_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_actor_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_genre_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_opendate_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_story_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td><div class='movie_age_"+i+"'></div>");
+                $(".movielist_content_"+i).append("<td class='td_btn'><button class='modify'>수정</button></td>");
+                $(".movielist_content_"+i).append("<td class='td_btn'><button class='delete'>삭제</button></td>");
+
+                $(".movie_name_"+i).text(data[i].name);
+                $(".movie_director_"+i).text(data[i].director);
+                $(".movie_actor_"+i).text(data[i].actor);
+                $(".movie_genre_"+i).text(data[i].genre);
+                $(".movie_opendate_"+i).text(data[i].opendate);
+                $(".movie_story_"+i).text(data[i].story);
+                $(".movie_age_"+i).text(data[i].age);
+
+            }
+        });
 });
+
+     
+               /*
+ for(var i=0;i<5;i++){
+            $(".ownerpage_movie").append(".movielist_content");
+            $(".movie_name").text(data[0].name);
+        $(".movie_director").text(data[0].director);
+        $(".movie_actor").text(data[0].name);
+        $(".movie_genre").text(data[0].genre);
+        $(".movie_opendate").text(data[0].opendate);
+        $(".movie_age").text(data[0].age);
+        $("#t_story").text(data[0].name);
+
+
+               $(."movie_director").text(data[0].영화제목</div>
+                    </td>
+                    <td>
+                        <div class="movie_director">영화감독</div>
+                    </td>
+                    <td>
+                        <div class="movie_actor">출연진</div>
+                    </td>
+                    <td>
+                        <div class="movie_genre">장르</div>
+                    </td>
+                    <td>
+                        <div class="movie_opendate">개봉일</div>
+                    </td>
+                    <td>
+                        <div class="movie_age">등급</div>
+                    </td>
+                    <td>
+                        <div class="movie_story">줄거리</div>
+                    </td>*/
+   
+ 
 
 
 $(".nowshowingbtn").click(function() {

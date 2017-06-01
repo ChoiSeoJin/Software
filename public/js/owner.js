@@ -32,4 +32,3 @@ $(".movie_add").click(function() {
 				}
 			});
 });
-

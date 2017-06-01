@@ -37,6 +37,7 @@ module.exports = function(app, Member,Movie) {
 		console.log("asdmfo");
 				var movie = new Movie();
 				movie.name = req.body.name;
+				movie.actor= req.body.actor;
 				movie.director = req.body.director;
  				movie.genre =  req.body.genre;
  				movie.opendate = req.body.opendate;
@@ -51,5 +52,10 @@ module.exports = function(app, Member,Movie) {
 
 				res.end("OK");
 			});
-		
+	app.get('/movie/movielist',function(req,res){
+		Movie.find(function(err, movies){
+			if(err) return res.status(500).send({error: 'database failure'});
+			res.json(movies);
+		})
+	})
 }
