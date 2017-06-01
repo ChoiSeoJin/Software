@@ -8,6 +8,7 @@ $(".movie_add").click(function() {
     var m_posterURL = $('#m_posterURL').val();
     var m_videoURL = $('#m_videoURL').val();
     var m_steelcutURL = $('#m_steelcutURL').val();
+    var m_star = $('#m_star').val();
     var m_story = $('#m_story').val();
     var m_type = $('#m_type').val();
 
@@ -24,6 +25,7 @@ $(".movie_add").click(function() {
             posterURL: m_posterURL,
             videoURL: m_videoURL,
             steelcutURL: m_steelcutURL,
+            star:m_star,
             story: m_story
         },
 
@@ -43,6 +45,7 @@ $(".movie_add").click(function() {
     $('#m_steelcutURL').val("");
     $('#m_story').val("");
     $('#m_type').val("");
+    $('#m_star').val("");
 
 
 });
@@ -101,8 +104,8 @@ function getMovieList() {
             $(".movielist_content_" + i).append("<td><div class='movie_actor_" + i + "'></div>");
             $(".movielist_content_" + i).append("<td><div class='movie_genre_" + i + "'></div>");
             $(".movielist_content_" + i).append("<td><div class='movie_opendate_" + i + "'></div>");
-            $(".movielist_content_" + i).append("<td><div class='movie_story_" + i + "'></div>");
             $(".movielist_content_" + i).append("<td><div class='movie_age_" + i + "'></div>");
+            $(".movielist_content_" + i).append("<td><div class='movie_story_" + i + "'></div>");
             $(".movielist_content_" + i).append("<td class='td_btn'><div class='modify'>수정</div></td>");
             $(".movielist_content_" + i).append("<td class='td_btn'><div class='delete'>삭제</div></td>");
 
