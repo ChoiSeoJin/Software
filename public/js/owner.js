@@ -106,16 +106,16 @@ function getMovieList() {
             $(".movielist_content_" + i).append("<td><div class='movie_genre_" + i + "'></div>");
             $(".movielist_content_" + i).append("<td><div class='movie_opendate_" + i + "'></div>");
             $(".movielist_content_" + i).append("<td><div class='movie_age_" + i + "'></div>");
-            $(".movielist_content_" + i).append("<td><div class='movie_story_" + i + "'></div>");
-            $(".movielist_content_" + i).append("<td class='td_btn'><div class='modify'>수정</div></td>");
-            $(".movielist_content_" + i).append("<td class='td_btn'><div class='delete'>삭제</div></td>");
+            
+            $(".movielist_content_" + i).append("<td class='td_btn'><div class='modify' style='cursor: Pointer;'>수정</div></td>");
+            $(".movielist_content_" + i).append("<td class='td_btn'><div class='delete' style='cursor: Pointer'>삭제</div></td>");
 
             $(".movie_name_" + i).text(data[i].name);
             $(".movie_director_" + i).text(data[i].director);
             $(".movie_actor_" + i).text(data[i].actor);
             $(".movie_genre_" + i).text(data[i].genre);
             $(".movie_opendate_" + i).text(data[i].opendate);
-            $(".movie_story_" + i).text(data[i].story);
+           
             $(".movie_age_" + i).text(data[i].age);
 
             $('.delete').click(function() {
@@ -150,7 +150,8 @@ function getAllMember() {
 
  		for(var i=0; i<data.length; i++) {
  			console.log(data[i].id);
- 			listparent.append("<div>" + data[i].id + "</div>");
+ 			listparent.append("<div style='border-left:3px solid black; float:left; width:300px; font-size:18px;'>" + data[i].id + "</div>");
+                                    listparent.append("<div style='border-right:3px solid black; border-bottom:3px solid black;font-size:18px; cursor: Pointer; '>" + '삭제'+ "</div>");
         	}
  	});
 

@@ -48,6 +48,7 @@ module.exports = function(app, Member, Movie) {
         console.log("asdmfo");
         var movie = new Movie();
 
+
         movie.name = req.body.name;
         movie.subtitle = req.body.subtitle;
         movie.director = req.body.director;
@@ -60,6 +61,7 @@ module.exports = function(app, Member, Movie) {
         movie.posterurl = req.body.posturl;
         movie.story = req.body.story;
         movie.steelcuturl = req.body.steelcuturl;
+
         movie.save(function(err) {
             if (err) console.log("movie save err");
         });
