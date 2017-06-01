@@ -14,11 +14,12 @@ db.once('open', function(){
 mongoose.connect('mongodb://localhost/test');
 
 var Member = require('./models/member');
+var Movie=require('./models/movie');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var router = require('./routes/router')(app, Member);
+var router = require('./routes/router')(app, Member,Movie);
 
 app.set('views', __dirname + '/public');
 app.set('view engine', 'ejs');

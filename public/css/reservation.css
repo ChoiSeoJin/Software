@@ -687,3 +687,92 @@ background-color: white;
 	text-align: center;	
 	line-height: 40px;
 }
+.ownerpage_menu{
+	float: left;
+}
+body .ownerpage_content {
+	width:85%;
+	height:800px;
+	display: inline-block;
+}
+.ownerpage_content .ownerpage_content_head{
+	width: 100%;
+	
+	padding: 5%;
+
+
+}
+.ownerpage_content .ownerpage_content_head div{
+	text-align: right;
+	padding: 5% 0 0 0;
+
+}
+.ownerpage_content .ownerpage_content_head span{
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 10px;	
+	border-bottom: 3px solid gray;
+}
+.movielistdiv .ownerpage_movie{
+
+	width: 100%;	
+	
+}
+.movielistdiv{
+	height: 100%;
+	border:3px solid black;
+}
+
+.movielist_head td, .movieadd_head td{
+	height: 40px;
+	border : 2px solid gray;
+}
+.movielist_content .td_btn{
+	width:40px;
+}
+.ownerpage_movie tr div{
+
+	text-align: center;
+	color: gray;
+	font-weight: bold;
+	
+}
+.movielist_content{
+	height: 40px;
+}
+.ownerpage_movie div div span{
+	font-size: 16px;
+}
+.ownerpage_movie div input{
+	width: 80%;
+
+}
+.ownerpage_movie div textarea{
+	width: 100%;
+	height: 50%;
+	resize: none;
+
+}
+{
+	height: 46px;
+	width: 46px;
+	margin-bottom: 2px;
+}
+.movieadd_content td{
+	margin-left : 10px;
+}
+.add_sel{
+	text-align: right;
+}
+.row_add, .movie_add{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color : #49ba8e;
+	border-radius : 15px;
+	
+}
+.row_add span, .movie_add span{
+	width: 60px;
+	height: 60px;
+}
