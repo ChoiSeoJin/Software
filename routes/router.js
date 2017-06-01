@@ -84,4 +84,10 @@ module.exports = function(app, Member, Movie) {
             res.json(movies);
         });
     });
+    app.post('/movie/removemovie', function(req, res) {
+        Movie.remove({name:req.body.name}, function(err, movie) {
+            if(err) return res.status(500).json({ error: "database failure" });
+            res.end("good");
+        });
+    });
 }
