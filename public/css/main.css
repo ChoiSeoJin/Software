@@ -138,7 +138,6 @@ span, body, div, img, button {
     width: 230px;
     height: 336px;    
     background: #FFFFFF;
-    
 }
 .storeimg img  {
 	width: 228px;
@@ -179,6 +178,7 @@ span, body, div, img, button {
 .movieimg {
 	width: 230px;
 	height: 336px;
+	position: relative;
 }
 .storeimg {
 	width: 228px;
@@ -187,7 +187,7 @@ span, body, div, img, button {
 }
 
 .starstr {
-	margin-top: 6px;
+	margin-top: 7px;
 	font-size: 15px;
 	float: left;
 	color: #6A6A6A;
@@ -340,4 +340,28 @@ span, body, div, img, button {
 	margin-top: 10px;
     	margin-bottom: 10px;
     	font-size: 18px;
+}
+.upcomingpage .movieareadiv{
+	background-color: white;
+}
+.stars .d_day{
+	font-size: 17px;
+	margin-top:5px;
+	float: right;
+}
+.onimgLeft{
+	float:left;
+	position: absolute;
+	left:0;
+	bottom:0;
+	z-index:11;
+	display:block;
+	width:70px;
+	height:24px;
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+	color:#fff;
+	line-height:24px;
+	width:100%; height:49px; text-align:left; padding:19px 0 0 20px;
 }
