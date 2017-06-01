@@ -48,18 +48,18 @@ module.exports = function(app, Member, Movie) {
         console.log("asdmfo");
         var movie = new Movie();
 
-        movie.name: req.body.name;
-        movie.subtitle : req.body.subtitle;
-        movie.director: req.body.director;
-        movie.actor : req.body.actor;
-        movie.genre : req.body.genre;
-        movie.opendate : req.body.opendate;
-        movie.age : req.body.age;
-        movie.count: req.body.count;
-        movie.star: req.body.star;
-        movie.posterurl : req.body.posturl;
-        movie.story : req.body.story;
-        movie.steelcuturl : req.body.steelcuturl;
+        movie.name= req.body.name;
+        movie.subtitle = req.body.subtitle;
+        movie.director= req.body.director;
+        movie.actor = req.body.actor;
+        movie.genre = req.body.genre;
+        movie.opendate = req.body.opendate;
+        movie.age = req.body.age;
+        movie.count= req.body.count;
+        movie.star= req.body.star;
+        movie.posterurl = req.body.posturl;
+        movie.story = req.body.story;
+        movie.steelcuturl = req.body.steelcuturl;
         movie.save(function(err) {
             if (err) console.log("movie save err");
         });
