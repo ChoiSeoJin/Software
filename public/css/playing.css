@@ -46,6 +46,13 @@
           overflow-y:auto;
         }
 
+        .modal-content.modal-lowsize {
+          height: auto;
+          min-height: 80%;
+          overflow-x:hidden;
+          overflow-y:auto;
+        }
+
         .modal.modal-center {
           text-align: center;
         }

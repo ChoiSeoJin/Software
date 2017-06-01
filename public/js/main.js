@@ -1,58 +1,55 @@
 $(".nowplayingdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".nowplayingpage").removeClass("inactive");
-    $(".nowplayingpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".nowplayingpage").removeClass("pageinactive");
+    $(".nowplayingpage").addClass("pageactive");
 });
 $(".upcomingdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".upcomingpage").removeClass("inactive");
-    $(".upcomingpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".upcomingpage").removeClass("pageinactive");
+    $(".upcomingpage").addClass("pageactive");
 });
 $(".theaterdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".theaterpage").removeClass("inactive");
-    $(".theaterpage").addClass("active");
-    $(".kangnamtheater").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".theaterpage").removeClass("pageinactive");
+    $(".theaterpage").addClass("pageactive");
 });
 $(".reservationdiv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".reservationpage").removeClass("inactive");
-    $(".reservationpage").addClass("active");
-});
-$(".seatlayout").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".seatlayout").removeClass("inactive");
-    $(".seatlayout").addClass("active");
-    
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".reservationpage").removeClass("pageinactive");
+    $(".reservationpage").addClass("pageactive");
 });
 
 $(".homeicondiv").click(function() {
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".mainpage").removeClass("pageinactive");
+    $(".mainpage").addClass("pageactive");
+});
+$(".bookbtn").click(function(){
+   var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".reservationpage").removeClass("pageinactive");
+    $(".reservationpage").addClass("pageactive");
+});
+
+$(".ownerdiv").click(function(){
     var nowActive = $(".active");
     nowActive.removeClass("active");
     nowActive.addClass("inactive"); 
-    $(".mainpage").removeClass("inactive");
-    $(".mainpage").addClass("active");
+    $(".ownerpage").removeClass("inactive");
+    $(".ownerpage").addClass("active");
 });
-$(".bookbtn").click(function(){
-   var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".reservationpage").removeClass("inactive");
-    $(".reservationpage").addClass("active");
-});
-$(".login").click(function() {
-    alert("login");
-});
+
 
 $(".nowshowingbtn").click(function() {
     var me = $(this);
@@ -92,6 +89,52 @@ $(".kuribtn").click(function() {
 
 
 
+$(".kangnambtn").click(function() {
+    var me = $(".kangnamtheater");
+    var other = $(".kuritheater");
+    other.removeClass("theateractive");
+    other.addClass("theaterinactive");
+    me.removeClass("theaterinactive");
+    me.addClass("theateractive");
+});
+
+$(".kuribtn").click(function() {
+    var me = $(".kuritheater");
+    var other = $(".kangnamtheater");
+    other.removeClass("theateractive");
+    other.addClass("theaterinactive");
+    me.removeClass("theaterinactive");
+    me.addClass("theateractive");
+});
+
+$(".signupstr").click(function() {
+    var me = $(".signinarea");
+    var other = $(".signuparea");
+    me.removeClass("signactive");
+    me.addClass("signinactive");
+    other.removeClass("signinactive");
+    other.addClass("signactive");
+});
+
+$(".signinstr").click(function() {
+    var me = $(".signuparea");
+    var other = $(".signinarea");
+    me.removeClass("signactive");
+    me.addClass("signinactive");
+    other.removeClass("signinactive");
+    other.addClass("signactive");
+});
+
+
+
+$(".finished").click(function() {
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".mypagediv").removeClass("pageinactive");
+    $(".mypagediv").addClass("pageactive");
+});
+
 function onYouTubeIframeAPIReady() {
                 var player;
                 player = new YT.Player('heroVideoTvScreen', {
@@ -121,9 +164,9 @@ function onYouTubeIframeAPIReady() {
                 });
               }
 $(".storediv").click(function() {
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".storepage").removeClass("inactive");
-    $(".storepage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageinactive");
+    nowActive.addClass("pageinactive"); 
+    $(".storepage").removeClass("pageinactive");
+    $(".storepage").addClass("pageactive");
 });

@@ -3,7 +3,7 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: lighter;
-    src: url("Montserrat-Black.otf") format("opentype");
+    src: url("Montserrat-Light.otf") format("opentype");
 }
 
 @font-face {
@@ -27,7 +27,11 @@ span, body, div, img, button {
 	position: static;
 }
 
+<<<<<<< HEAD
 .nowplayingdiv:hover, .theaterdiv:hover, .upcomingdiv:hover, .reservationdiv:hover, .logindiv:hover, .storediv:hover {
+=======
+.nowplayingdiv:hover, .theaterdiv:hover, .upcomingdiv:hover, .reservationdiv:hover, .logindiv:hover, .storediv:hover , .logoutdiv:hover, .usernamediv:hover, .ownerdiv:hover{
+>>>>>>> origin/choi
 	color: #4EA385;
 	cursor: Pointer;
 }
@@ -37,10 +41,17 @@ span, body, div, img, button {
 }
 
 
+<<<<<<< HEAD
 .homeicondiv , .nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv{
 	float: left;
 }
 .nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv{
+=======
+.homeicondiv , .nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv, .logoutdiv, .ownerdiv{
+	float: left;
+}
+.nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv, .logoutdiv, .usernamediv, .ownerdiv{
+>>>>>>> origin/choi
 	font-family: 'Noto Sans', sans-serif;
 	margin-top: 13px;
 	margin-left: 23px;
@@ -244,14 +255,33 @@ span, body, div, img, button {
 	text-align: center;
 	font-weight: bold;
 	padding-top: 7px;
+<<<<<<< HEAD
+=======
 
 }
 
-.active {
+.pageactive {
 	display: block;
 }
 
-.inactive {
+.pageinactive, .inactive{
+	display: none;
+}
+
+.theateractive, .active,{
+	display: block;
+}
+>>>>>>> origin/choi
+
+.theaterinactive, {
+	display: none;
+}
+
+.seatactive {
+	display: block;
+}
+
+.seatinactive {
 	display: none;
 }
 
@@ -269,6 +299,7 @@ span, body, div, img, button {
 	margin-right: 25%; 
 	font-family: 'Nanum Gothic';
 }
+<<<<<<< HEAD
 .info_s{
 	margin-bottom: 5px;
 	margin-top: 10px;
@@ -364,4 +395,141 @@ span, body, div, img, button {
 	color:#fff;
 	line-height:24px;
 	width:100%; height:49px; text-align:left; padding:19px 0 0 20px;
+=======
+
+.signindiv {
+	display: inline-block;
+	height: 100%;
+	color: #49BA8E;
+	font-family: 'Montserrat';
+	font-size: 17px;
+	margin: 0 auto;
+	
+}
+
+#well > .modal-header {
+	background: #1F2533;
+	text-align: center;
+
+}
+
+.idinput, .passwordinput {
+	width: 100%;
+	height: 40px;
+	font-size: 15px;
+	text-indent: 20px;
+	
+}
+
+.idinputdiv, .passwordinputdiv {
+	width: 80%;
+	height: 40px;
+	background: yellow;
+	margin: 0 auto;
+	font-size: 15px;
+
+}
+
+.passwordinputdiv {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.idinputdiv > input, .passwordinputdiv > input {
+	border: 0.5px solid #DDDDDD;
+	font-family: Montserrat;
+	outline: 0;
+}
+
+.idinputdiv > input:focus, .passwordinputdiv > input:focus {
+	border: 0.5px solid #49BA8E;
+
+}
+
+#well > .modal-title {
+	text-align: center;
+	font-family: Montserrat;
+}
+
+#well > .modal-body {
+	background: #F2F2F2;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.modalbuttondiv {
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.modalwrapdiv {
+	text-align: center;
+}
+
+.signinbtn {
+	display: inline-block;
+	width: 80%;
+	height: 40px;
+	padding-top: 10px;
+	background: #97222D;
+	color:white;
+	font-family: Montserrat;
+	text-align: center;
+}
+
+.signinbtnwrap {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	font-size: 13px;
+  font-family: Montserrat;
+}
+
+.fotgotpassword {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 12px;
+	font-family: Montserrat;
+	color: #2F63CF;
+}
+
+.signupstr, .signinstr {
+	color: #C43A46;
+	font-size: 15px;
+	font-family: Montserrat;
+	text-decoration: underline;
+}
+
+.signupstr:hover , .signinstr:hover, .fotgotpassword:hover, .signinbtn:hover {
+	cursor:pointer;
+}
+
+.goodstrdiv {
+	margin-bottom: 15px;
+}
+
+.signactive {
+	display: block;
+}
+
+.signinactive {
+	display: none;
+}
+
+.validationinactive {
+	display: none;
+}
+
+.tempinactive {
+	display: none;
+}
+
+.usernamediv {
+	float: right;
+	margin-right: 40px;
+>>>>>>> origin/choi
 }
