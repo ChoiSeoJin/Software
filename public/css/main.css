@@ -273,3 +273,71 @@ span, body, div, img, button {
 	margin-bottom: 5px;
 	margin-top: 10px;
 }
+.list_m{
+	margin-left:15%;
+	margin-right:15%;
+}
+
+.recommand_m{
+	height:400px;
+	width:100%;
+
+}
+.boxoffice_m{
+	height:100%;
+	width:30%;
+	float: left;
+	padding-right:5%;
+	margin-left:3%;
+}
+.office_m{
+	padding:0px;
+	background-color: #efebdb;
+	border: 1px solid #e1e1e1;
+	height:100%;
+
+}
+.office_m li{
+	height:54px;
+	padding: 11px 10px 0;
+}
+.Mid{
+	display:inline-block;
+	 width:130px; 
+	height:17px; 
+	line-height:17px; 
+	vertical-align:middle; 
+	text-overflow:ellipsis; 
+	overflow:hidden; 
+	white-space:nowrap;
+	font-weight: bold;
+}
+.rank{
+	padding-right: 5px;
+	font-size:20px;
+	font-style: italic;
+	font-weight: bold;
+}
+.nowplayingpage .movieareadiv{
+	background-color: white;
+}
+.recommand img{
+	width:100%;
+	height:auto;
+}
+.recommand_m .recommand{
+	width: 65%;
+	height:100%;
+	display: inline-block;
+}
+.recommand .r_img{
+	width :33%;
+	height: 100%;
+	float: left;
+	padding-right: 5%;
+}
+.recommand li{
+	margin-top: 10px;
+    	margin-bottom: 10px;
+    	font-size: 18px;
+}
