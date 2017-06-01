@@ -37,7 +37,7 @@ module.exports = function(app, Member,Movie) {
 		console.log("asdmfo");
 				var movie = new Movie();
 				movie.name = req.body.name;
-				movie.actor= req.body.actor;
+				moive.actor = req.body.actor;
 				movie.director = req.body.director;
  				movie.genre =  req.body.genre;
  				movie.opendate = req.body.opendate;
