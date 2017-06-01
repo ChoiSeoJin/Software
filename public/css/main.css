@@ -27,11 +27,8 @@ span, body, div, img, button {
 	position: static;
 }
 
-<<<<<<< HEAD
-.nowplayingdiv:hover, .theaterdiv:hover, .upcomingdiv:hover, .reservationdiv:hover, .logindiv:hover, .storediv:hover {
-=======
+
 .nowplayingdiv:hover, .theaterdiv:hover, .upcomingdiv:hover, .reservationdiv:hover, .logindiv:hover, .storediv:hover , .logoutdiv:hover, .usernamediv:hover, .ownerdiv:hover{
->>>>>>> origin/choi
 	color: #4EA385;
 	cursor: Pointer;
 }
@@ -41,17 +38,11 @@ span, body, div, img, button {
 }
 
 
-<<<<<<< HEAD
-.homeicondiv , .nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv{
-	float: left;
-}
-.nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv{
-=======
+
 .homeicondiv , .nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv, .logoutdiv, .ownerdiv{
 	float: left;
 }
 .nowplayingdiv , .theaterdiv, .upcomingdiv, .reservationdiv, .logindiv, .storediv, .logoutdiv, .usernamediv, .ownerdiv{
->>>>>>> origin/choi
 	font-family: 'Noto Sans', sans-serif;
 	margin-top: 13px;
 	margin-left: 23px;
@@ -255,9 +246,6 @@ span, body, div, img, button {
 	text-align: center;
 	font-weight: bold;
 	padding-top: 7px;
-<<<<<<< HEAD
-=======
-
 }
 
 .pageactive {
@@ -271,7 +259,6 @@ span, body, div, img, button {
 .theateractive, .active,{
 	display: block;
 }
->>>>>>> origin/choi
 
 .theaterinactive, {
 	display: none;
@@ -299,7 +286,7 @@ span, body, div, img, button {
 	margin-right: 25%; 
 	font-family: 'Nanum Gothic';
 }
-<<<<<<< HEAD
+
 .info_s{
 	margin-bottom: 5px;
 	margin-top: 10px;
@@ -395,7 +382,7 @@ span, body, div, img, button {
 	color:#fff;
 	line-height:24px;
 	width:100%; height:49px; text-align:left; padding:19px 0 0 20px;
-=======
+}
 
 .signindiv {
 	display: inline-block;
@@ -531,5 +518,4 @@ span, body, div, img, button {
 .usernamediv {
 	float: right;
 	margin-right: 40px;
->>>>>>> origin/choi
 }

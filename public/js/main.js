@@ -43,11 +43,11 @@ $(".bookbtn").click(function(){
 });
 
 $(".ownerdiv").click(function(){
-    var nowActive = $(".active");
-    nowActive.removeClass("active");
-    nowActive.addClass("inactive"); 
-    $(".ownerpage").removeClass("inactive");
-    $(".ownerpage").addClass("active");
+    var nowActive = $(".pageactive");
+    nowActive.removeClass("pageactive");
+    nowActive.addClass("pageinactive"); 
+    $(".ownerpage").removeClass("pageinactive");
+    $(".ownerpage").addClass("pageactive");
 });
 
 
