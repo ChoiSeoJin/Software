@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var router = require('./routes/router')(app);
-
+var mongoose = require('mongoose');
 app.set('views', __dirname + '/public');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
