@@ -31,9 +31,13 @@ ul{
 
 
 .Selected{
-	background-color: black;	
+	background-color: black;
+	color :white;
 }
-
+.full{
+	background-color : black;
+	color : white;
+}
 .movie_info .movie_img{
 	background-color: white;
 	width: 30%;
@@ -781,4 +785,10 @@ body .ownerpage_content {
 .name_m{
 	margin-top:0;
 	border-bottom : 1px solid black;
+}
+.white{
+
+}
+.black{
+
 }

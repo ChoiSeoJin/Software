@@ -15,7 +15,7 @@ $(".gyeongdiv").click(function() {
 	$(".theater-list").append("<div>수원</div>");
 	$(".theater-list").append("<div>안양</div>");
 	$(".theater-list").append("<div>의정부</div>");
-	$(".theater-list").append("<div>구리</div>");	
+	$(".theater-list").append("<div>구리</div>");
 });
 
 $(".incheondiv").click(function() {
@@ -43,14 +43,19 @@ $('number_info').ready(function(){
 		
 	});
 });
+
 $('.movie_info').ready(function(){
 	$('.body a').click(function(){
 		var nowActive = $(".pageactive");
   		nowActive.removeClass("pageactive");
    		nowActive.addClass("pageinactive"); 
    		$(".seatlayout").removeClass("pageinactive");
+
    		$(".seatlayout").addClass("pageactive");
    		$(".seat").addClass("selected_active");
+   		$(".cnt").removeClass("Selected");
+		$('.cnt').css('color',"#333");
+   		
 		var data_id_parent = $(this).parent().parent().parent();
 		var data_id = $(this);
 
@@ -125,6 +130,7 @@ $('.mypage_reservation_info').ready(function(){
 		}
 	});
 });
+
 $('.mypage_store_info').ready(function(){
 
 });
@@ -176,22 +182,22 @@ function seat_selected(i,j){
 	  	var selected_length=$('.Row_Col_Selected').length;
 	  
 	   	if(selected_length==cnt_number){
-	   		console.log("자리만땅");
-	   	}
+	   		if(obj.className=='_'){
+	   			
+	   				console.log("자리만땅");
+	   		}	
+			else $('#'+obj.id).removeClass('Row_Col_Selected');	   	}
 	   	else{
 	   		if(obj.className=='_'){
 	    		$('#'+obj.id).addClass('Row_Col_Selected');
 	    		
-	    	} 
+	    		} 
 	   		else
 	   		{
-	   			 $('#'+obj.id).removeClass('Row_Col_Selected');
+	   		$('#'+obj.id).removeClass('Row_Col_Selected');
 	   			 
 	   		}
-	   	}  	
-	    
- 		
-	    
+	   	}  	    
 	 	console.log($('.Row_Col_Selected').length);
 	   
 	   /*

@@ -148,6 +148,12 @@ $(".signinstr").click(function() {
 
 
 $(".finished").click(function() {
+
+    $("#"+$('.Row_Col_Selected').attr('id')).addClass("full");
+    $("#"+$('.Row_Col_Selected').attr('id')).removeClass("Row_Col_Selected");
+ 
+
+    
     var nowActive = $(".pageactive");
     nowActive.removeClass("pageactive");
     nowActive.addClass("pageinactive"); 
