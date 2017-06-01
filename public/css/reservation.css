@@ -1,0 +1,706 @@
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: lighter;
+    src: url("Montserrat-Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: NanumGothic;
+    font-style: normal;
+    src: url("NanumGothicBold.ttf") format("truetype");
+}
+
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.time_table ul{
+	
+	background-color: #e6e4d9;
+	-webkit-margin-before:0;
+	-webkit-margin-after:0
+	-webkit-padding-start:0;
+	border-radius : 0 0 15px 15px ;
+	height : 332px;
+
+}
+
+
+.Selected{
+	background-color: black;	
+}
+
+.movie_info .movie_img{
+	background-color: white;
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+.movie_info .movie_text{
+	margin-left: 20px;
+
+	display: inline-block;
+	width: 60%;
+	color: white;
+
+}
+
+.movie_text span{
+	margin-top: 10px;
+	padding-right:10px;
+	float : left;
+	display: block;
+	width: 30%;	
+}
+
+.movie_text div{
+	display: inline-block;
+	margin-top: 10px;
+	width: 70%;
+	padding-left:10px;
+}
+.movie_name{
+	
+}
+.movie_theater{
+	
+}
+.movie_date{
+	
+}
+.movie_theater_number{
+	
+}
+
+.reservationpage{
+	width:1000px;
+	margin : 0 auto;
+	margin-top:5%;
+}
+.seatlayout{
+	width:1000px;
+	margin : 0 auto;
+	
+}
+.reservation_summary{
+	width: 	100%;
+	height: 150px;
+	background-color: #333;
+	padding :10px;
+
+}
+.reservation_summary .movie_info{
+	
+	width : 50%;
+	height: 100%;
+	
+	float : left;
+	
+}
+.reservation_summary .number_info{
+	height: 130px;
+	display: block;
+	left:45%;
+	position: absolute;
+	padding : 20px 0 0 15px ;
+	float: left;
+}
+.reservation_summary .finished{
+	display: inline-block;
+	width : 15%;
+	height: 100%;
+	float: right;
+	background-color: #c02c3a;
+	border-radius : 15px;
+	padding : 10px 13PX;
+
+}
+.reservation_summary .finished a{
+	/*border :  2px solid #d6d3ce;*/
+	border-radius : 15px;	
+	width: 100%;
+	height: 100%;
+	padding-left: 5px;
+	padding-top: 3px;
+	display: inline-block;
+	
+
+}
+.reservation_summary .number_info .senior{
+	height: 50px;
+ 	margin-bottom: 10px; 
+}
+.number_info ul
+{
+	float : left;
+	width :auto;
+	height: 22px;
+	line-height: 22px;
+	overflow:hidden;
+}
+.number_info ul li{
+	width : 20px;
+	height: auto;
+	line-height: 20px;
+	border:1px solid #d6d3ce;
+	background-color: #f2f0e5;
+	float : left;
+	margin-right : 6px;
+}
+.number_info ul li a{
+	display: block;
+	height: 100%;
+	color : #333;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+.reservation_summary .number_info span{
+ 		float : left;
+ 	width : 50px;
+ 	height: 22px;
+ 	line-height: 22px;
+ 	color : white;
+}
+.reservation_summary .number_info .junior{
+
+height: 50px;
+
+}			
+.theater{
+	 display: inline-block;
+	 float : left;
+	 width: 170px;
+	font-family: Montserrat;
+	border-radius : 15px;
+	margin-right: 2%;
+}
+.theater .theater-head{
+	background-color: #333;
+	width:170px;
+	height:40px;
+	margin-top : 10px;
+	display :table;
+	border : 1px solid #333;
+	border-radius : 15px 15px 0 0;
+
+}
+p{
+	color: #d4d3c9;
+	text-align: center;
+	display : table-cell;
+	vertical-align: middle;
+}
+.theater .theater-select{
+	background-color: #e6e4d9;
+	position : relative;
+	float : left;
+	border : 1px solid #d4d3c9;
+	width : 100%;
+	height : 332px;
+	border-radius : 0 0 15px 15px ;
+}
+.theater-select .theater-area-list{
+	position : relative;
+	float : left;
+	 border-right : 1px solid #d4d3c9;
+	width : 50%;
+	height : 332px;
+}
+.theater-select .theater-list{
+	position : relative;
+	float : left;
+	 border-right : 1px solid #d4d3c9;
+	width : 50%;
+	height : 332px;
+	 display:block;
+}
+.theater-select .theater-list div{
+	width: 100%;
+}
+
+.theater-select .theater-area-list div{
+
+   border-bottom : 1px solid #eff1f3;
+   height : 40px;
+	width:100%;
+   text-align: center;	
+ 	line-height: 40px;
+
+	
+}
+.theater-select .theater-area-list div a{
+	
+	display :inline-block;
+	font-size: 11px;
+	width:100%;
+	position : relative;
+	font-family: NanumGothic;
+	text-decoration: none;
+}
+
+.time_table{
+	display : inline-block;
+	width:80%;
+
+}
+.time_table .time_table-head{
+	background-color: #333;
+	width:100%;
+	height:40px;
+	margin-top : 10px;
+	display :table;
+	border-radius : 15px 15px 0 0;
+
+
+}
+.time_table ul li{
+	display:inline-block;
+	width :90%;
+	zoom : 1;
+	border-bottom : 1px solid #eff1f3;
+	padding :13px 0 13px 13px;
+	
+
+}
+.listing-info {
+	float : left;
+	color : #999999;
+	width :30%;
+
+}
+.time_table ul li > div{
+	float : left;
+	text-align : left;
+	font-weight:400;
+	margin-top:8px;
+	padding-left: 20px;
+}
+.time_table ul li .listing-info .details{
+	float : left;
+	margin-top:5px;
+	padding-left:5px;
+	display : table;
+	width :100%;
+}
+.time_table ul li .body{
+	float : left;
+	width : 60%;
+	font-family: Montserrat,sans-serif;
+	margin-top:5px;
+	padding-left: 20px;
+
+}
+
+
+.time_table ul li .listing-info .details ._name{
+	display : table-cell;
+	vertical-align : top;
+	font-size:12px;
+	color : #333333;
+	margin-bottom :10px;
+	padding-left:5px;
+	padding-right:20px;
+	position :relative;
+
+	
+	
+}
+.time_table ul li .body>div{
+	float : left;
+	position : relative;
+	width:50px;
+	line-height: 30px;
+	background-color: white;
+	margin-left: 5px;
+	margin-bottom :12px;
+	text-align: center;
+	box-shadow: 0 0 0 1px #dddddd;
+	color : #0066ff;
+	border-radius : 2px;
+}
+.time_table ul li .body>div a{
+	float : left;
+	font-size : 10px;
+	display :inline-block;
+	width:100%;
+	position : relative;
+	font-family: Montserrat,sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+.cal{
+	width:350px;
+	height: 50px;
+	 float: left;
+	overflow: hidden;
+	position: relative;
+
+}
+.month{
+	float: left;
+	width:  50px;
+	height: 50px;
+	
+	padding: 5px;
+}
+.month span{
+
+	font-size: 24px;
+	font-weight: bold;
+	width:  100%;
+	height: 100%;
+}
+.cal .movable{
+	display: flex;
+  	width: 1000%;
+  	height: 50px;
+ 	transition: transform 0.4s;
+}
+
+.cal .movable div{
+	
+  	background-color : #49ba8e;
+	border-radius : 15px;
+	width:50px;
+	height: 50px;
+	text-align: center;
+	padding-top: 12px;
+}
+.prev, .next{
+	height: 50px;
+}
+.layout .seat_table tr td div{
+	float :left;
+	margin: 4px 2px;
+	font-size: 14px;
+	color: #b3b3b3;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+border-radius : 26%;
+	font-family: Verdana;
+	font-weight: bold;
+}
+.layout .seat_table tr td div span{
+	display: block;
+	padding-top:5px;
+}
+.layout .seat_table tr td div a{
+	border:1px solid #49ba8e;
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius : 26%;
+	color : #ccc;
+	font-weight: bold;
+padding-top: 5px;
+	font-family: Verdana;
+	font-size: 12px;
+	text-decoration: none;
+
+}
+.layout .seat_table{
+	display: block;
+	margin : 0 auto;	
+}
+
+.layout .seat_table tr{
+	
+	margin-top: 1px;
+	font-size: 14px;
+	color: #b3b3b3;
+	width: 20px;
+	height: 20px;
+}
+.seat{
+		margin-top: 4%;
+		height: 700px;
+
+}
+.Row_Col_Selected{
+	background-color: #49ba8e;
+	color: white;
+}
+.seat .screen{
+	background-color : #f4f4f4;
+	height: 25px;
+	margin: 0 auto;
+	width :50%;
+	line-height: 25px;
+	margin-bottom: 3%;
+	text-align: center;
+}
+.seat .screen span{
+	width: 57px;
+	height: 25px;
+	display: inline-block;
+	zoom :1;
+
+}
+
+.mypagediv{
+
+}
+.mypagecontent{
+	/*background-image: url("/img/screen.png");*/
+	display: inline-block;
+	width : 100%;
+	height: 200px;
+	background-color: #1F2533;
+	padding-left: 10%;
+	padding-top: 20px;
+}
+.mypagecontent .mypageimage{
+	left:10%;
+	width : 200px;
+	float: left;
+}
+.user_info{
+	display: inline-block;
+	width : 300px;
+}
+.user_info div{
+	color: white;
+	display: inline-block;
+	width :70%;
+	margin-top: 5%;
+}
+.user_info span{
+	color: white;
+	width :30%;
+	float: left;
+	margin-top: 5%;
+}
+._active{
+	box-shadow:	inset 0 -3px 0 #49ba8e;
+}
+.tap-list{
+	zoom :1;
+	position: relative;
+	border-bottom : 1px solid #dfe3e7;
+	padding : 0 20px;
+	list-style: none;
+	margin:0;
+    padding:0;
+}
+.mypage_tap{
+	padding : 15px 15px 0;
+	margin-bottom: 0;
+}
+.tap-list li{
+	display: inline-block;
+	padding :15px 10px;
+}
+.mypage_reservation_info{
+	height: 250px;
+
+	padding-left: 10%;
+	padding-top: 20px;
+}
+.mypage_store_info{
+	height: 100%;
+	background-color: yellow;
+	padding-left: 10%;
+	padding-top: 20px;
+}
+.selected_active{
+opacity: 0.4;
+background-color: white;
+  
+}
+.mypage_reservation_info li{
+	display : inline-block;
+	zoom : 1;
+	border-bottom : 1px solid #eff1f3;
+
+	width: 100%;
+	height: 100%;
+}
+.mypage_reservation_info li #imagediv{
+	width: 20%;
+	float: left;
+}
+.mypage_reservation_info li #movie_info{
+	width: 80%;
+	height: 180px;
+	display: inline-block;
+}
+.mypage_reservation_info li #movie_info span{
+	float: left;
+	padding-top: 20px;
+}
+.mypage_reservation_info li #movie_info div{
+	width : 70%;
+	padding-top: 20px;
+}
+.slider {
+        width: 50%;
+        margin: 30px;
+}
+
+.slick-slide {
+      margin: 0px 20px;
+    }
+
+.slick-slide img {
+      width: 100%;
+    }
+
+.slick-prev:before,
+.slick-next:before {
+        color: black;
+    }
+
+.als-container {
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+	z-index: 0;
+}
+/*********************/
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;
+}
+
+.als-wrapper {
+	position: relative;
+	list-style: none;
+}
+
+.als-item {
+	position: relative;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+.als-prev, .als-next {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+}
+/*************************************
+ * specific styling for #demo1
+ ************************************/
+
+#demo1 {
+	margin: 40px auto;
+}
+
+#demo1 .als-item {
+	margin: 0px 5px;
+	padding: 4px 0px;
+	min-height: 120px;
+	min-width: 100px;
+	text-align: center;
+}
+
+#demo1 .als-item div {
+
+	background-color : #49ba8e;
+	border-radius : 15px;
+	width:50px;
+	height: 50px;
+	text-align: center;
+	float : left;
+	font-weight: 400px;
+	display: inline-block;
+	
+	}
+
+#demo1 .als-prev, #demo1 .als-next {
+	top: 40px;
+}
+
+#demo1 .als-prev {
+	left: 200px;
+}
+
+#demo1 .als-next {
+	right: 200px;
+}
+.ownerpage_menu{
+	width : 15%;
+	height :800px;
+		padding-top: 20px;
+	border-right: 2px solid gray;
+	background-color: #1F2533;
+	color : white;
+}
+.ownerpage_menu span{
+	font-size : 40px;
+	font-weight :bold;
+
+}
+.ownerpage_menu .ownerpage_menu_head{
+	text-align: center;
+	height: 10%;
+}
+.ownerpage_menu .movie_manager, .ownerpage_menu .member_manager{
+	border-bottom: 2px solid gray;
+}
+.movie_manager .movie_manager_head, .member_manager .member_manager_head{
+	height: 20%;
+	font-size : 20px;
+	padding-left: 13px;
+	border-bottom: 2px solid gray;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.movie_manager ul, .member_manager ul{
+	height : 60%;
+	margin-bottom: 0px;
+}
+.movie_manager ul li, .member_manager ul li{
+	height : 30%;
+	border-left: 2px solid gray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.movie_manager ul li span,.member_manager ul li span{
+	font-size: 16px;
+}
+
+.seouldiv:hover, .gyeongdiv:hover, .incheondiv:hover, .daegeondiv:hover {
+	cursor: Pointer
+}
+
+.seouldiv, .gyeongdiv, .incheondiv, .daegeondiv {
+	
+}
+
+.theater-select div{
+	border-bottom : 1px solid #eff1f3;
+	height : 40px;
+	width: 50%;
+	display: inline-block;
+	text-align: center;	
+	line-height: 40px;
+}
+
+.add_sel{
+	text-align: right;
+}
+.row_add, .movie_add{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color : #49ba8e;
+	border-radius : 15px;
+	
+}
+.row_add span, .movie_add span{
+	width: 60px;
+	height: 60px;
+}
