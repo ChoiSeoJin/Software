@@ -48,7 +48,7 @@ body .ownerpage_content {
 	
 }
 .movielistdiv{
-	height: 100%;
+	height: auto;
 	border:3px solid black;
 }
 
@@ -81,4 +81,26 @@ body .ownerpage_content {
 	height: 50%;
 	resize: none;
 
+}
+.ownerpage_user{
+	width:100%;
+}
+
+.us_id .ownerpage_content_head{
+	width: 100%;
+	
+	padding: 5%;
+
+
+}
+.us_id .ownerpage_content_head div{
+	text-align: right;
+	padding: 5% 0 0 0;
+
+}
+.us_id .ownerpage_content_head span{
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 10px;	
+	border-bottom: 3px solid gray;
 }
