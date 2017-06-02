@@ -453,7 +453,7 @@ span, body, div, img, button {
 	text-align: center;
 }
 
-.signinbtn {
+.signinbtn, .signupbtn {
 	display: inline-block;
 	width: 80%;
 	height: 40px;
