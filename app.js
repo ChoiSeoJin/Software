@@ -4,6 +4,9 @@ var app = express();
 var bodyParser  = require('body-parser');
 var mongoose    = require('mongoose');
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
 var db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', function(){

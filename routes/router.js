@@ -47,9 +47,6 @@ module.exports = function(app, Member, Movie) {
     app.post('/movie/addmovie', function(req, res) {
         console.log("asdmfo");
         var movie = new Movie();
-
-
-
         movie.name = req.body.name;
         movie.subtitle = req.body.subtitle;
         movie.director = req.body.director;
@@ -97,4 +94,41 @@ module.exports = function(app, Member, Movie) {
             res.end("good");
         });
     });
+    app.get('/keyboard',function(req, res) {
+        console.log('keyboard');
+	var str = '{"type":"buttons","buttons":["Now Playing","UpComing"]}'
+	res.end(str);
+    });
+    app.post('/message',function(req,res) {
+	Movie.find(function(err, movies) {
+            var movieinfor = JSON.stringify(movies);
+            var jsonstr = JSON.parse(movieinfor);
+            var sendmsg = "";
+            var x = 0;
+            var length = 0;
+            var order = 1;
+            console.log(req.body.content);
+            if(req.body.content == "NOW PLAYING") {
+                console.log("aa");
+                sendmsg = "NOW PLAYING MOVIES\\n";
+                x=0;
+                length = 10;
+            } else {
+                console.log("bb");
+                sendmsg = "UPCOMING MOVIES\\n";
+                x=10;
+                length = 20;
+            }
+            for(x; x < length ; x++) {
+                var temp = '' + order +'.' + jsonstr[x].name + '\\n';
+                sendmsg += temp;
+                order++;
+            }
+            var teststr = '{"message":{"text":"' + sendmsg  + '"},"keyboard":{"type":"buttons","buttons":["NOW PLAYING","UPCOMING"]}}';
+            var str = '{"message":{"text":"'+movieinfor+'"},"keyboard":{"type":"buttons","buttons":["Now Playing", "Up Coming"]}}';
+	    res.end(teststr);
+        });
+    });
+
+
 }
